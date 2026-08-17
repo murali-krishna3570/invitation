@@ -96,12 +96,12 @@ export default function CoverView({ onOpen, lang }) {
 
         {/* Circular Frame with Couple Image and Mandala Overlay */}
         <div className="relative mx-auto mt-10 aspect-square w-full max-w-[346px]">
-          <div className="absolute inset-[13%] overflow-hidden rounded-full">
+          <div className="absolute inset-[13%] overflow-hidden rounded-full shadow-inner border-2 border-gold/30">
             <img
               src={coupleImg || "/assets/couple.webp"}
-              alt="The couple in traditional wedding attire"
+              alt="Kuppala Sandhya and Singuluri Somasekhar"
               fetchpriority="high"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-top"
             />
           </div>
           <img

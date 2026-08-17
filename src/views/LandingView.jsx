@@ -83,13 +83,17 @@ export default function LandingView({ lang }) {
           {isTelugu ? "రెండు మనసులు · ఒక జీవిత పయనం" : "Two Hearts · One Beautiful Journey"}
         </h2>
 
-        {/* Couple Standing Illustration */}
-        <img
-          src={coupleStandingImg || "/assets/couple-standing.webp"}
-          alt="Kuppala Sandhya and Singuluri Somasekhar in traditional wedding attire"
-          className="mx-auto mt-6 w-[260px] select-none"
-          loading="eager"
-        />
+        {/* User Provided Couple Portrait */}
+        <div className="mt-6 flex justify-center">
+          <div className="relative overflow-hidden rounded-3xl border-4 border-gold/40 shadow-xl max-w-[300px]">
+            <img
+              src={coupleStandingImg || "/assets/couple-standing.webp"}
+              alt="Kuppala Sandhya and Singuluri Somasekhar"
+              className="w-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
 
         {/* SECTION 1: Bride's Parents & Bride */}
         <div className="mt-10 rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm font-telugu">
@@ -225,13 +229,17 @@ export default function LandingView({ lang }) {
         </p>
       </div>
 
-      {/* Venue Photo */}
-      <img
-        src={venueImg || "/assets/venue.webp"}
-        alt="Sri Padmalaya kalyana mandapam"
-        className="mt-5 w-full select-none object-cover max-w-[500px] mx-auto"
-        loading="eager"
-      />
+      {/* User Provided Venue Photo */}
+      <div className="mt-5 px-6 max-w-[500px] mx-auto">
+        <div className="overflow-hidden rounded-2xl border-2 border-gold/40 shadow-lg">
+          <img
+            src={venueImg || "/assets/venue.webp"}
+            alt="Sri Padmalaya kalyana mandapam"
+            className="w-full select-none object-cover"
+            loading="eager"
+          />
+        </div>
+      </div>
 
       {/* Venue Location & Directions */}
       <div className="mx-auto w-full max-w-[390px] px-6 pb-14 pt-6">
