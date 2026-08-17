@@ -54,10 +54,10 @@ export default function CoverView({ onOpen, lang }) {
 
         {/* Header / Title */}
         <div className="mt-10 text-center">
-          <p className="text-[11px] font-light uppercase tracking-[0.22em] text-cocoa">
-            {isTelugu ? "సాదరంగా ఆహ్వానిస్తున్నాము" : "You are invited to the wedding of"}
+          <p className="text-[11px] font-light uppercase tracking-[0.22em] text-cocoa font-telugu">
+            {isTelugu ? "మా వివాహ వేడుకకు సాదర ఆహ్వానం" : "You are invited to the wedding of"}
           </p>
-          <h2 className="mt-2 font-display text-[20px] font-semibold text-gold tracking-wide">
+          <h2 className="mt-2 font-display text-[20px] font-semibold text-gold tracking-wide font-telugu">
             {isTelugu ? "వివాహ ఆహ్వాన పత్రిక" : "Wedding Invitation"}
           </h2>
         </div>
@@ -88,7 +88,7 @@ export default function CoverView({ onOpen, lang }) {
           <button
             type="button"
             onClick={handleOpen}
-            className="rounded-full bg-maroon px-9 py-4 text-[13px] font-medium uppercase tracking-[0.16em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer"
+            className="rounded-full bg-maroon px-9 py-4 text-[13px] font-medium uppercase tracking-[0.16em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer font-telugu"
           >
             {isTelugu ? "ఆహ్వాన పత్రిక చూడండి" : "Open Invitation"}
           </button>

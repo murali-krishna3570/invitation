@@ -36,12 +36,12 @@ export default function LandingView({ lang }) {
           <span className="whitespace-nowrap">Avighnamastu</span>
         </div>
 
-        <p className="mt-8 text-center text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
+        <p className="mt-8 text-center text-[11px] font-light uppercase tracking-[0.2em] text-cocoa font-telugu">
           {isTelugu ? "పెద్దల ఆశీస్సులతో" : "With the blessings of our elders"}
         </p>
 
         {/* Header / Title */}
-        <h2 className="mt-3 text-center font-display text-[22px] font-bold text-gold tracking-wide">
+        <h2 className="mt-3 text-center font-display text-[22px] font-bold text-gold tracking-wide font-telugu">
           {isTelugu ? "వివాహ ఆహ్వాన పత్రిక" : "Wedding Invitation"}
         </h2>
 
@@ -66,7 +66,7 @@ export default function LandingView({ lang }) {
           )}
         </div>
 
-        <p className="mt-8 text-center text-[11px] font-light uppercase leading-[2] tracking-[0.2em] text-cocoa">
+        <p className="mt-8 text-center text-[11px] font-light uppercase leading-[2] tracking-[0.2em] text-cocoa font-telugu">
           {isTelugu ? "మా వివాహ వేడుకకు మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము" : "Inviting you to celebrate our wedding"}
         </p>
 
@@ -79,7 +79,7 @@ export default function LandingView({ lang }) {
         />
 
         {/* Tagline Header */}
-        <h2 className="mt-8 text-center font-display text-[24px] font-bold uppercase leading-[1.25] tracking-[0.01em] text-maroon">
+        <h2 className="mt-8 text-center font-display text-[24px] font-bold uppercase leading-[1.25] tracking-[0.01em] text-maroon font-telugu">
           {isTelugu ? "రెండు మనసులు · ఒక జీవిత పయనం" : "Two Hearts · One Beautiful Journey"}
         </h2>
 
@@ -92,24 +92,24 @@ export default function LandingView({ lang }) {
         />
 
         {/* SECTION 1: Bride's Parents & Bride */}
-        <div className="mt-10 rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm">
+        <div className="mt-10 rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm font-telugu">
           <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
             {isTelugu ? "వధువు (Bride)" : "Our Bride"}
           </p>
-          <p className="mt-2 text-[26px] font-bold text-maroon font-telugu">
+          <p className="mt-2 text-[26px] font-bold text-maroon">
             Kuppala Sandhya
             <br />
             <span className="text-[22px] font-semibold text-maroon">(కుప్పాల సంధ్య)</span>
           </p>
           <div className="mt-4 pt-3 border-t border-gold/20">
-            <p className="text-[12px] font-medium leading-[1.8] text-cocoa">
+            <p className="text-[13px] font-medium leading-[1.8] text-cocoa">
               {isTelugu ? (
                 <>
-                  <span className="font-semibold text-maroon">కుప్పాల చైనా మోహన రావు & కుప్పాల ఝాన్సీ లక్ష్మి</span> గారు తమ కుమార్తె <span className="font-semibold text-maroon">కుప్పాల సంధ్య</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                  <span className="font-semibold text-maroon">కుప్పాల చిన్న మోహన రావు & కుప్పాల ఝాన్సీ లక్ష్మి</span> గారు తమ కుమార్తె <span className="font-semibold text-maroon">కుప్పాల సంధ్య</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
                 </>
               ) : (
                 <>
-                  <span className="font-semibold text-maroon">Kuppala China Mohana Rao & Kuppala Jhansi Lakshmi</span> cordially invite you to the wedding of their daughter: <span className="font-semibold text-maroon">Kuppala Sandhya (కుప్పాల సంధ్య)</span>
+                  <span className="font-semibold text-maroon">Kuppala Chinna Mohana Rao & Kuppala Jhansi Lakshmi</span> cordially invite you to the wedding of their daughter: <span className="font-semibold text-maroon">Kuppala Sandhya (కుప్పాల సంధ్య)</span>
                 </>
               )}
             </p>
@@ -125,17 +125,17 @@ export default function LandingView({ lang }) {
         />
 
         {/* SECTION 2: Groom's Parents & Groom */}
-        <div className="rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm">
+        <div className="rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm font-telugu">
           <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
             {isTelugu ? "వరుడు (Groom)" : "Our Groom"}
           </p>
-          <p className="mt-2 text-[26px] font-bold text-maroon font-telugu">
+          <p className="mt-2 text-[26px] font-bold text-maroon">
             Singuluri Somasekhar
             <br />
             <span className="text-[22px] font-semibold text-maroon">(సింగులూరి సోమశేఖర్)</span>
           </p>
           <div className="mt-4 pt-3 border-t border-gold/20">
-            <p className="text-[12px] font-medium leading-[1.8] text-cocoa">
+            <p className="text-[13px] font-medium leading-[1.8] text-cocoa">
               {isTelugu ? (
                 <>
                   <span className="font-semibold text-maroon">సింగులూరి వీరవేణి</span> గారు తన కుమారుడు <span className="font-semibold text-maroon">సింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
@@ -159,13 +159,13 @@ export default function LandingView({ lang }) {
           className="pointer-events-none absolute bottom-0 left-1/2 w-[390px] max-w-none -translate-x-1/2 select-none opacity-[0.08]"
         />
         <div className="relative mx-auto w-full max-w-[390px] px-6 pb-16">
-          <p className="py-2 text-center font-script text-[44px] leading-[1.3] text-maroon">
+          <p className="py-2 text-center font-script text-[44px] leading-[1.3] text-maroon font-telugu">
             {isTelugu ? "సుముహూర్తం" : "Save the Date"}
           </p>
 
           <ScratchCard label={isTelugu ? "తేదీని చూడటానికి రుద్దండి (Scratch)" : "Scratch to reveal the date"}>
             <div className="mt-6 rounded-[15px] border border-gold/50 bg-cream px-5 py-7 text-center shadow-sm">
-              <p className="text-[11px] font-light uppercase tracking-[0.18em] text-cocoa">
+              <p className="text-[11px] font-light uppercase tracking-[0.18em] text-cocoa font-telugu">
                 {isTelugu ? "సుముహూర్త సమయం" : "The auspicious day"}
               </p>
               <p className="mt-2 text-[20px] font-bold uppercase tracking-[0.04em] text-maroon font-telugu">
@@ -188,15 +188,15 @@ export default function LandingView({ lang }) {
 
       {/* Dinner & Countdown Section */}
       <div className="mx-auto w-full max-w-[390px] px-6">
-        <h2 className="text-center font-display text-[24px] font-bold uppercase text-maroon">
+        <h2 className="text-center font-display text-[24px] font-bold uppercase text-maroon font-telugu">
           {isTelugu ? "విందు (Dinner)" : "Dinner"}
         </h2>
-        <p className="mt-3 text-center text-[20px] font-semibold uppercase leading-[1.3] tracking-[0.01em] text-maroon">
+        <p className="mt-3 text-center text-[20px] font-semibold uppercase leading-[1.3] tracking-[0.01em] text-maroon font-telugu">
           30th August 2026
           <br />
           {isTelugu ? "ఆదివారం సాయంత్రం 7:30 గంటల నుండి" : "Sunday 7:30 PM Onwards"}
         </p>
-        <p className="mt-2 text-center text-[13px] font-light text-cocoa">
+        <p className="mt-2 text-center text-[13px] font-light text-cocoa font-telugu">
           {isTelugu ? "కల్యాణ మంటపము నందు" : "At the Marriage Venue"}
         </p>
 
@@ -209,7 +209,7 @@ export default function LandingView({ lang }) {
         />
 
         {/* Live Countdown */}
-        <h2 className="text-center font-display text-[24px] font-bold uppercase leading-[1.25] text-maroon">
+        <h2 className="text-center font-display text-[24px] font-bold uppercase leading-[1.25] text-maroon font-telugu">
           {isTelugu ? "వివాహ శుభ ఘడియలు" : "The Countdown Begins"}
         </h2>
         <div className="mt-8">
@@ -217,10 +217,10 @@ export default function LandingView({ lang }) {
         </div>
 
         {/* SECTION 4: Venue */}
-        <h2 className="mt-20 text-center font-display text-[26px] font-bold uppercase tracking-[0.02em] text-maroon">
+        <h2 className="mt-20 text-center font-display text-[26px] font-bold uppercase tracking-[0.02em] text-maroon font-telugu">
           {isTelugu ? "కల్యాణ వేదిక (Venue)" : "The Venue"}
         </h2>
-        <p className="mt-1 text-center text-[12px] font-light uppercase tracking-[0.18em] text-cocoa">
+        <p className="mt-1 text-center text-[12px] font-light uppercase tracking-[0.18em] text-cocoa font-telugu">
           {isTelugu ? "వివాహ ప్రాంగణము" : "Where we celebrate"}
         </p>
       </div>
@@ -247,7 +247,7 @@ export default function LandingView({ lang }) {
             href={MAPS_URL}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-maroon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer inline-flex items-center gap-2 text-center"
+            className="rounded-full bg-maroon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer inline-flex items-center gap-2 text-center font-telugu"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -259,7 +259,7 @@ export default function LandingView({ lang }) {
       </div>
 
       {/* Footer */}
-      <footer className="bg-maroon px-6 py-14 text-center text-primary-foreground">
+      <footer className="bg-maroon px-6 py-14 text-center text-primary-foreground font-telugu">
         <div className="mx-auto w-full max-w-[390px]">
           <p className="text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
             {isTelugu ? "మీ రాకయే మాకు ఆనందం" : "Your presence is our greatest gift"}
@@ -268,14 +268,14 @@ export default function LandingView({ lang }) {
             {isTelugu ? "మిమ్మల్ని ఆహ్వానించుటలో ఆనందిస్తున్నాము" : "We look forward to celebrating with you"}
           </p>
           <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
-            {isTelugu ? "ఆహ్వానించువారు" : "With warm regards"}
+            {isTelugu ? "ఆహ్వానించువారు:" : "With warm regards"}
           </p>
-          <div className="mt-4 font-telugu text-[18px] leading-[1.8] font-semibold">
-            <p>కుప్పాల చైనా మోహన రావు & ఝాన్సీ లక్ష్మి</p>
+          <div className="mt-4 text-[18px] leading-[1.8] font-semibold">
+            <p>కుప్పాల చిన్న మోహన రావు & ఝాన్సీ లక్ష్మి</p>
             <p>సింగులూరి వీరవేణి</p>
           </div>
           <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
-            {isTelugu ? "బంధుమిత్రుల సభాసదుల శుభాకాంక్షలతో" : "Best wishes from near & dear"}
+            {isTelugu ? "బంధుమిత్రుల శుభాకాంక్షలతో" : "Best wishes from near & dear"}
           </p>
         </div>
       </footer>
