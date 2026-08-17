@@ -5,22 +5,32 @@ import LanguageToggle from './components/LanguageToggle';
 
 export default function App() {
   const [view, setView] = useState(() => {
-    return window.location.pathname === '/landing' ? 'landing' : 'cover';
+    return window.location.hash === '#landing' || window.location.pathname.endsWith('/landing') ? 'landing' : 'cover';
   });
   
   const [lang, setLang] = useState('en');
 
   useEffect(() => {
-    const handlePopState = () => {
-      setView(window.location.pathname === '/landing' ? 'landing' : 'cover');
+    const handleNavigation = () => {
+      if (window.location.hash === '#landing' || window.location.pathname.endsWith('/landing')) {
+        setView('landing');
+      } else {
+        setView('cover');
+      }
     };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+
+    window.addEventListener('popstate', handleNavigation);
+    window.addEventListener('hashchange', handleNavigation);
+    return () => {
+      window.removeEventListener('popstate', handleNavigation);
+      window.removeEventListener('hashchange', handleNavigation);
+    };
   }, []);
 
   const openLanding = () => {
-    window.history.pushState(null, '', '/landing');
+    window.location.hash = 'landing';
     setView('landing');
+    window.scrollTo(0, 0);
   };
 
   return (
