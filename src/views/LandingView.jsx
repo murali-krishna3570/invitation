@@ -12,7 +12,7 @@ import venueImg from '../assets/venue.webp';
 
 const MAPS_URL = "https://maps.app.goo.gl/c1S77XUwXfrWTjQC8";
 
-export default function LandingView({ lang }) {
+export default function LandingView({ lang, onViewChange }) {
   const isTelugu = lang === 'te';
 
   return (
@@ -217,7 +217,7 @@ export default function LandingView({ lang }) {
           {isTelugu ? "వివాహ శుభ ఘడియలు" : "The Countdown Begins"}
         </h2>
         <div className="mt-8">
-          <Countdown target="2026-08-30T23:29:00+05:30" />
+          <Countdown target="2026-08-30T23:29:00+05:30" lang={lang} />
         </div>
 
         {/* SECTION 4: Venue */}
@@ -264,6 +264,31 @@ export default function LandingView({ lang }) {
             {isTelugu ? "గూగుల్ మ్యాప్స్‌లో చూడండి (View on Google Maps)" : "View on Google Maps"}
           </a>
         </div>
+
+        {/* Wedding Rituals CTA Card */}
+        {onViewChange && (
+          <div className="mt-8 rounded-2xl border border-gold/40 bg-gold/10 p-5 text-center shadow-sm font-telugu">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-maroon">
+              🪔 {isTelugu ? "వివాహ వేడుక విశిష్టత" : "Wedding Traditions"}
+            </p>
+            <h3 className="mt-1.5 text-[17px] font-bold text-maroon">
+              {isTelugu ? "వివాహ ఆచారాలు & ప్రాశస్త్యం" : "Wedding Rituals & Significance"}
+            </h3>
+            <p className="mt-2 text-[12.5px] leading-[1.6] text-cocoa">
+              {isTelugu
+                ? "గణపతి పూజ, గౌరీ పూజ, కన్యాదానం, జీలకర్ర బెల్లం, తాళి కట్టడం మరియు సప్తపది ఆచారాల విశిష్టతలను తెలుసుకోండి."
+                : "Discover the deep meaning behind Ganesh Puja, Gowri Puja, Kanyadanam, Jeelakarra Bellam, Thali Tying & Saptapadi."}
+            </p>
+            <button
+              type="button"
+              onClick={() => onViewChange('rituals')}
+              className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-maroon px-6 py-2.5 text-[12px] font-semibold text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer"
+            >
+              <span>{isTelugu ? "ఆచారాల విశిష్టత చూడండి" : "Explore Rituals"}</span>
+              <span>➔</span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Footer */}
