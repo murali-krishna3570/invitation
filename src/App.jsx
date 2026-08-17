@@ -55,7 +55,13 @@ export default function App() {
       <LanguageToggle lang={lang} onToggle={setLang} />
 
       {/* Main Views */}
-      {view === 'cover' && <CoverView onOpen={openLanding} lang={lang} />}
+      {view === 'cover' && (
+        <CoverView
+          onOpen={openLanding}
+          onOpenRituals={() => changeView('rituals')}
+          lang={lang}
+        />
+      )}
       {view === 'landing' && <LandingView lang={lang} onViewChange={changeView} />}
       {view === 'rituals' && <RitualsView lang={lang} />}
 

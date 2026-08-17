@@ -4,7 +4,7 @@ import ganeshaImg from '../assets/ganesha.webp';
 import coupleImg from '../assets/couple.webp';
 import mandalaImg from '../assets/mandala.webp';
 
-export default function CoverView({ onOpen, lang }) {
+export default function CoverView({ onOpen, onOpenRituals, lang }) {
   const [isLeaving, setIsLeaving] = useState(false);
 
   const handleOpen = () => {
@@ -83,14 +83,26 @@ export default function CoverView({ onOpen, lang }) {
           )}
         </div>
 
-        {/* CTA Button */}
-        <div className="mt-8 flex justify-center">
+        {/* CTA Buttons */}
+        <div className="mt-8 flex flex-col items-center gap-3">
           <button
             type="button"
             onClick={handleOpen}
-            className="rounded-full bg-maroon px-9 py-4 text-[13px] font-medium uppercase tracking-[0.16em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer font-telugu"
+            className="w-full max-w-[280px] rounded-full bg-maroon px-6 py-4 text-[13px] font-medium uppercase tracking-[0.16em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer font-telugu text-center"
           >
             {isTelugu ? "ఆహ్వాన పత్రిక చూడండి" : "Open Invitation"}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('play-invitation-music'));
+              if (onOpenRituals) onOpenRituals();
+            }}
+            className="w-full max-w-[280px] rounded-full border border-maroon/40 bg-cream/90 px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-maroon shadow-xs transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer font-telugu flex items-center justify-center gap-2"
+          >
+            <span>🪔</span>
+            <span>{isTelugu ? "పూజా క్రమం & ఆచారాలు" : "Puja Process & Rituals"}</span>
           </button>
         </div>
 

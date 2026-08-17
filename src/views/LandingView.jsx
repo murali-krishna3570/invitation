@@ -29,6 +29,20 @@ export default function LandingView({ lang, onViewChange }) {
           className="mx-auto h-[62px] w-auto select-none"
         />
 
+        {/* Quick View Tab Button */}
+        {onViewChange && (
+          <div className="mt-3 flex justify-center font-telugu">
+            <button
+              type="button"
+              onClick={() => onViewChange('rituals')}
+              className="inline-flex items-center gap-1.5 rounded-full border border-gold/50 bg-gold/15 px-4 py-1.5 text-[11.5px] font-semibold text-maroon shadow-2xs hover:bg-gold/25 transition-all cursor-pointer"
+            >
+              <span>🪔</span>
+              <span>{isTelugu ? "పూజా క్రమం & ఆచారాలు చూడండి ➔" : "View Puja Process & Rituals ➔"}</span>
+            </button>
+          </div>
+        )}
+
         {/* Blessings Subtitle */}
         <div className="mt-4 flex items-center justify-between gap-2 font-serif-italic italic text-[13px] leading-normal text-gold">
           <span className="whitespace-nowrap">Srirastu</span>

@@ -30,7 +30,7 @@ export default function Navigation({ activeView, onViewChange, lang }) {
         }`}
       >
         <span>🪔</span>
-        <span>{isTelugu ? 'వివాహ ఆచారాలు' : 'Rituals'}</span>
+        <span>{isTelugu ? 'పూజా క్రమం & ఆచారాలు' : 'Puja Process'}</span>
       </button>
     </nav>
   );

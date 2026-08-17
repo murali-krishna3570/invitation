@@ -163,8 +163,8 @@ export default function RitualsView({ lang }) {
           <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
             {isTelugu ? "తెలుగు వివాహ సంప్రదాయం & వేద మూలాలు" : "Telugu Wedding Traditions & Scriptural Basis"}
           </p>
-          <h1 className="mt-2 font-display text-[25px] font-bold text-maroon tracking-wide">
-            {isTelugu ? "వివాహ ఆచారాలు & ప్రాశస్త్యం" : "Wedding Rituals & Significance"}
+          <h1 className="mt-2 font-display text-[24px] font-bold text-maroon tracking-wide">
+            {isTelugu ? "వివాహ పూజా క్రమం & ఆచారాల ప్రాశస్త్యం" : "Wedding Puja Process, Rituals & Significance"}
           </h1>
           <p className="mt-2 text-[13px] font-medium leading-[1.6] text-cocoa max-w-[350px] mx-auto">
             {isTelugu
