@@ -49,7 +49,7 @@ export default function LandingView({ lang }) {
         <div className="mt-4 text-center">
           {isTelugu ? (
             <h1 className="font-telugu text-[36px] font-bold leading-[1.4] text-maroon">
-              పుప్పాల సంధ్య
+              కుప్పాల సంధ్య
               <br />
               <span className="text-gold text-[28px]">&</span>
               <br />
@@ -57,7 +57,7 @@ export default function LandingView({ lang }) {
             </h1>
           ) : (
             <h1 className="font-script text-[42px] leading-[1.4] text-maroon">
-              Puppala Sandhya
+              Kuppala Sandhya
               <br />
               <span className="text-gold text-[30px]">&</span>
               <br />
@@ -86,7 +86,7 @@ export default function LandingView({ lang }) {
         {/* Couple Standing Illustration */}
         <img
           src={coupleStandingImg || "/assets/couple-standing.webp"}
-          alt="Puppala Sandhya and Singuluri Somasekhar in traditional wedding attire"
+          alt="Kuppala Sandhya and Singuluri Somasekhar in traditional wedding attire"
           className="mx-auto mt-6 w-[260px] select-none"
           loading="eager"
         />
@@ -97,19 +97,19 @@ export default function LandingView({ lang }) {
             {isTelugu ? "వధువు (Bride)" : "Our Bride"}
           </p>
           <p className="mt-2 text-[26px] font-bold text-maroon font-telugu">
-            Puppala Sandhya
+            Kuppala Sandhya
             <br />
-            <span className="text-[22px] font-semibold text-maroon">(పుప్పాల సంధ్య)</span>
+            <span className="text-[22px] font-semibold text-maroon">(కుప్పాల సంధ్య)</span>
           </p>
           <div className="mt-4 pt-3 border-t border-gold/20">
             <p className="text-[12px] font-medium leading-[1.8] text-cocoa">
               {isTelugu ? (
                 <>
-                  <span className="font-semibold text-maroon">పుప్పాల చైనా మోహన రావు & పుప్పాల ఝాన్సీ లక్ష్మి</span> గారు తమ కుమార్తె <span className="font-semibold text-maroon">పుప్పాల సంధ్య</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                  <span className="font-semibold text-maroon">కుప్పాల చైనా మోహన రావు & కుప్పాల ఝాన్సీ లక్ష్మి</span> గారు తమ కుమార్తె <span className="font-semibold text-maroon">కుప్పాల సంధ్య</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
                 </>
               ) : (
                 <>
-                  <span className="font-semibold text-maroon">Puppala China Mohana Rao & Puppala Jhansi Lakshmi</span> cordially invite you to the wedding of their daughter: <span className="font-semibold text-maroon">Puppala Sandhya (పుప్పాల సంధ్య)</span>
+                  <span className="font-semibold text-maroon">Kuppala China Mohana Rao & Kuppala Jhansi Lakshmi</span> cordially invite you to the wedding of their daughter: <span className="font-semibold text-maroon">Kuppala Sandhya (కుప్పాల సంధ్య)</span>
                 </>
               )}
             </p>
@@ -127,7 +127,7 @@ export default function LandingView({ lang }) {
         {/* SECTION 2: Groom's Parents & Groom */}
         <div className="rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm">
           <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
-            {isTelugu ? "వరకథుడు (Groom)" : "Our Groom"}
+            {isTelugu ? "వరుడు (Groom)" : "Our Groom"}
           </p>
           <p className="mt-2 text-[26px] font-bold text-maroon font-telugu">
             Singuluri Somasekhar
@@ -271,7 +271,7 @@ export default function LandingView({ lang }) {
             {isTelugu ? "ఆహ్వానించువారు" : "With warm regards"}
           </p>
           <div className="mt-4 font-telugu text-[18px] leading-[1.8] font-semibold">
-            <p>పుప్పాల చైనా మోహన రావు & ఝాన్సీ లక్ష్మి</p>
+            <p>కుప్పాల చైనా మోహన రావు & ఝాన్సీ లక్ష్మి</p>
             <p>సింగులూరి వీరవేణి</p>
           </div>
           <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">

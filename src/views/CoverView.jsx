@@ -66,7 +66,7 @@ export default function CoverView({ onOpen, lang }) {
         <div className="mt-4 text-center">
           {isTelugu ? (
             <h1 className="font-telugu text-[32px] font-bold leading-[1.3] text-maroon">
-              పుప్పాల సంధ్య
+              కుప్పాల సంధ్య
               <br />
               <span className="text-gold text-[26px]">&</span>
               <br />
@@ -74,7 +74,7 @@ export default function CoverView({ onOpen, lang }) {
             </h1>
           ) : (
             <h1 className="font-script text-[48px] leading-[1.15] text-maroon">
-              Puppala Sandhya
+              Kuppala Sandhya
               <br />
               <span className="text-gold text-[36px]">&</span>
               <br />
