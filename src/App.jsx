@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CoverView from './views/CoverView';
 import LandingView from './views/LandingView';
 import LanguageToggle from './components/LanguageToggle';
+import AudioPlayer from './components/AudioPlayer';
 
 export default function App() {
   const [view, setView] = useState(() => {
@@ -35,6 +36,9 @@ export default function App() {
 
   return (
     <div className="w-full min-h-screen bg-cream selection:bg-gold/20 selection:text-maroon font-sans relative">
+      {/* Background Music Player */}
+      <AudioPlayer />
+
       {/* Persistent Bilingual Toggle Button */}
       <LanguageToggle lang={lang} onToggle={setLang} />
 

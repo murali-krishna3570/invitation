@@ -1,24 +1,39 @@
 import React, { useRef, useState, useEffect } from 'react';
+import invitationMp3 from '../assets/invitation.mp3';
 
-export default function AudioPlayer({ src = "/assets/invitation.mp3" }) {
+export default function AudioPlayer({ src }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioSource = src || invitationMp3 || "/assets/invitation.mp3";
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
     audio.volume = 0.6;
 
-    // Attempt auto play
-    audio.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
-
-    // Fallback: start audio on user's first pointer interaction
-    const handleFirstUserInteraction = () => {
-      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+    const playMusic = () => {
+      if (audio) {
+        audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      }
     };
 
-    window.addEventListener('pointerdown', handleFirstUserInteraction, { once: true });
-    return () => window.removeEventListener('pointerdown', handleFirstUserInteraction);
+    // Listen for custom trigger when "Open Invitation" is clicked
+    const handlePlayEvent = () => {
+      playMusic();
+    };
+
+    // Also fallback to any user pointer interaction
+    const handleFirstPointer = () => {
+      playMusic();
+    };
+
+    window.addEventListener('play-invitation-music', handlePlayEvent);
+    window.addEventListener('pointerdown', handleFirstPointer, { once: true });
+
+    return () => {
+      window.removeEventListener('play-invitation-music', handlePlayEvent);
+      window.removeEventListener('pointerdown', handleFirstPointer);
+    };
   }, []);
 
   const toggleAudio = () => {
@@ -34,7 +49,7 @@ export default function AudioPlayer({ src = "/assets/invitation.mp3" }) {
 
   return (
     <>
-      <audio ref={audioRef} src={src} loop preload="auto" />
+      <audio ref={audioRef} src={audioSource} loop preload="auto" />
       <button
         type="button"
         onClick={toggleAudio}

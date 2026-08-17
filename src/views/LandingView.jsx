@@ -1,5 +1,4 @@
 import React from 'react';
-import AudioPlayer from '../components/AudioPlayer';
 import FallingPetals from '../components/FallingPetals';
 import ScratchCard from '../components/ScratchCard';
 import Countdown from '../components/Countdown';
@@ -18,9 +17,6 @@ export default function LandingView({ lang }) {
 
   return (
     <div className="relative min-h-screen bg-cream text-cocoa animate-invite-enter">
-      {/* Background Music */}
-      <AudioPlayer src="/assets/invitation.mp3" />
-
       {/* Falling Flower Petals Overlay */}
       <FallingPetals count={14} />
 

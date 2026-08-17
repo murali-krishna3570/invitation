@@ -8,6 +8,9 @@ export default function CoverView({ onOpen, lang }) {
   const [isLeaving, setIsLeaving] = useState(false);
 
   const handleOpen = () => {
+    // Trigger music playback immediately on explicit user click gesture
+    window.dispatchEvent(new CustomEvent('play-invitation-music'));
+
     if (isLeaving) return;
     setIsLeaving(true);
     setTimeout(() => {
