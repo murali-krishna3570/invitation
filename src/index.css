@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF7F2;
+  --color-maroon: #7A1C29;
+  --color-gold: #C49A45;
+  --color-cocoa: #705C53;
+  --color-primary-foreground: #FFFFFF;
+
+  --font-script: "Great Vibes", cursive;
+  --font-serif-italic: "Cormorant Garamond", serif;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Jost", sans-serif;
+  --font-telugu: "Noto Serif Telugu", "Mandali", serif;
+}
+
+@keyframes invite-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(12px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+.animate-invite-enter {
+  animation: invite-enter 0.7s cubic-bezier(0.16, 1, 0.32, 1) forwards;
+}

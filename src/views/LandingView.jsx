@@ -1,0 +1,288 @@
+import React from 'react';
+import AudioPlayer from '../components/AudioPlayer';
+import FallingPetals from '../components/FallingPetals';
+import ScratchCard from '../components/ScratchCard';
+import Countdown from '../components/Countdown';
+
+import omImg from '../assets/om.png';
+import elephantsImg from '../assets/elephants.png';
+import coupleStandingImg from '../assets/couple-standing.png';
+import dividerImg from '../assets/divider.png';
+import templeImg from '../assets/temple.png';
+import venueImg from '../assets/venue.jpg';
+
+const MAPS_URL = "https://maps.app.goo.gl/c1S77XUwXfrWTjQC8";
+
+export default function LandingView({ lang }) {
+  const isTelugu = lang === 'te';
+
+  return (
+    <div className="relative min-h-screen bg-cream text-cocoa animate-invite-enter">
+      {/* Background Music */}
+      <AudioPlayer src="/assets/invitation.mp3" />
+
+      {/* Falling Flower Petals Overlay */}
+      <FallingPetals count={14} />
+
+      {/* Main Container */}
+      <div className="mx-auto w-full max-w-[390px] px-6 pb-0 pt-12">
+        {/* Om Symbol */}
+        <img
+          src={omImg || "/assets/om.png"}
+          alt="Om"
+          className="mx-auto h-[62px] w-auto select-none"
+        />
+
+        {/* Blessings Subtitle */}
+        <div className="mt-4 flex items-center justify-between gap-2 font-serif-italic italic text-[13px] leading-normal text-gold">
+          <span className="whitespace-nowrap">Srirastu</span>
+          <span className="whitespace-nowrap">Subhamastu</span>
+          <span className="whitespace-nowrap">Avighnamastu</span>
+        </div>
+
+        <p className="mt-8 text-center text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
+          {isTelugu ? "పెద్దల ఆశీస్సులతో" : "With the blessings of our elders"}
+        </p>
+
+        {/* Header / Title */}
+        <h2 className="mt-3 text-center font-display text-[22px] font-bold text-gold tracking-wide">
+          {isTelugu ? "వివాహ ఆహ్వాన పత్రిక" : "Wedding Invitation"}
+        </h2>
+
+        {/* Main Names */}
+        <div className="mt-4 text-center">
+          {isTelugu ? (
+            <h1 className="font-telugu text-[36px] font-bold leading-[1.4] text-maroon">
+              పుప్పాల సంధ్య
+              <br />
+              <span className="text-gold text-[28px]">&</span>
+              <br />
+              సింగులూరి సోమశేఖర్
+            </h1>
+          ) : (
+            <h1 className="font-script text-[42px] leading-[1.4] text-maroon">
+              Puppala Sandhya
+              <br />
+              <span className="text-gold text-[30px]">&</span>
+              <br />
+              Singuluri Somasekhar
+            </h1>
+          )}
+        </div>
+
+        <p className="mt-8 text-center text-[11px] font-light uppercase leading-[2] tracking-[0.2em] text-cocoa">
+          {isTelugu ? "మా వివాహ వేడుకకు మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము" : "Inviting you to celebrate our wedding"}
+        </p>
+
+        {/* Elephants Graphic */}
+        <img
+          src={elephantsImg || "/assets/elephants.png"}
+          alt=""
+          aria-hidden="true"
+          className="mx-auto mt-6 w-[250px] select-none"
+        />
+
+        {/* Tagline Header */}
+        <h2 className="mt-8 text-center font-display text-[24px] font-bold uppercase leading-[1.25] tracking-[0.01em] text-maroon">
+          {isTelugu ? "రెండు మనసులు · ఒక జీవిత పయనం" : "Two Hearts · One Beautiful Journey"}
+        </h2>
+
+        {/* Couple Standing Illustration */}
+        <img
+          src={coupleStandingImg || "/assets/couple-standing.png"}
+          alt="Puppala Sandhya and Singuluri Somasekhar in traditional wedding attire"
+          className="mx-auto mt-6 w-[260px] select-none"
+          loading="lazy"
+        />
+
+        {/* SECTION 1: Bride's Parents & Bride */}
+        <div className="mt-10 rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm">
+          <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
+            {isTelugu ? "వధువు (Bride)" : "Our Bride"}
+          </p>
+          <p className="mt-2 text-[26px] font-bold text-maroon font-telugu">
+            Puppala Sandhya
+            <br />
+            <span className="text-[22px] font-semibold text-maroon">(పుప్పాల సంధ్య)</span>
+          </p>
+          <div className="mt-4 pt-3 border-t border-gold/20">
+            <p className="text-[12px] font-medium leading-[1.8] text-cocoa">
+              {isTelugu ? (
+                <>
+                  <span className="font-semibold text-maroon">పుప్పాల చైనా మోహన రావు & పుప్పాల ఝాన్సీ లక్ష్మి</span> గారు తమ కుమార్తె <span className="font-semibold text-maroon">పుప్పాల సంధ్య</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                </>
+              ) : (
+                <>
+                  <span className="font-semibold text-maroon">Puppala China Mohana Rao & Puppala Jhansi Lakshmi</span> cordially invite you to the wedding of their daughter: <span className="font-semibold text-maroon">Puppala Sandhya (పుప్పాల సంధ్య)</span>
+                </>
+              )}
+            </p>
+          </div>
+        </div>
+
+        {/* Ornamental Divider */}
+        <img
+          src={dividerImg || "/assets/divider.png"}
+          alt=""
+          aria-hidden="true"
+          className="mx-auto my-7 w-[160px] select-none"
+        />
+
+        {/* SECTION 2: Groom's Parents & Groom */}
+        <div className="rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm">
+          <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
+            {isTelugu ? "వరకథుడు (Groom)" : "Our Groom"}
+          </p>
+          <p className="mt-2 text-[26px] font-bold text-maroon font-telugu">
+            Singuluri Somasekhar
+            <br />
+            <span className="text-[22px] font-semibold text-maroon">(సింగులూరి సోమశేఖర్)</span>
+          </p>
+          <div className="mt-4 pt-3 border-t border-gold/20">
+            <p className="text-[12px] font-medium leading-[1.8] text-cocoa">
+              {isTelugu ? (
+                <>
+                  <span className="font-semibold text-maroon">సింగులూరి వీరవేణి</span> గారు తన కుమారుడు <span className="font-semibold text-maroon">సింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                </>
+              ) : (
+                <>
+                  <span className="font-semibold text-maroon">Singuluri Veeraveni</span> cordially invites you to the wedding of her son: <span className="font-semibold text-maroon">Singuluri Somasekhar (సింగులూరి సోమశేఖర్)</span>
+                </>
+              )}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 3: Sumuhurtham & Scratch Card */}
+      <section className="relative mt-14 overflow-hidden">
+        <img
+          src={templeImg || "/assets/temple.png"}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 left-1/2 w-[390px] max-w-none -translate-x-1/2 select-none opacity-[0.08]"
+        />
+        <div className="relative mx-auto w-full max-w-[390px] px-6 pb-16">
+          <p className="py-2 text-center font-script text-[44px] leading-[1.3] text-maroon">
+            {isTelugu ? "సుముహూర్తం" : "Save the Date"}
+          </p>
+
+          <ScratchCard label={isTelugu ? "తేదీని చూడటానికి రుద్దండి (Scratch)" : "Scratch to reveal the date"}>
+            <div className="mt-6 rounded-[15px] border border-gold/50 bg-cream px-5 py-7 text-center shadow-sm">
+              <p className="text-[11px] font-light uppercase tracking-[0.18em] text-cocoa">
+                {isTelugu ? "సుముహూర్త సమయం" : "The auspicious day"}
+              </p>
+              <p className="mt-2 text-[20px] font-bold uppercase tracking-[0.04em] text-maroon font-telugu">
+                {isTelugu ? "సుముహూర్తం" : "Sumuhurtham"}
+              </p>
+              <p className="mt-3 font-display font-bold leading-none text-maroon">
+                <span className="text-[46px]">30</span>
+                <span className="align-super text-[18px]">th</span>
+              </p>
+              <p className="mt-3 text-[18px] font-semibold text-maroon">
+                August 2026, 11:29 PM
+              </p>
+              <div className="mt-4 pt-3 border-t border-gold/30 text-[14px] font-semibold text-maroon font-telugu">
+                ముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు.
+              </div>
+            </div>
+          </ScratchCard>
+        </div>
+      </section>
+
+      {/* Dinner & Countdown Section */}
+      <div className="mx-auto w-full max-w-[390px] px-6">
+        <h2 className="text-center font-display text-[24px] font-bold uppercase text-maroon">
+          {isTelugu ? "విందు (Dinner)" : "Dinner"}
+        </h2>
+        <p className="mt-3 text-center text-[20px] font-semibold uppercase leading-[1.3] tracking-[0.01em] text-maroon">
+          30th August 2026
+          <br />
+          {isTelugu ? "ఆదివారం సాయంత్రం 7:30 గంటల నుండి" : "Sunday 7:30 PM Onwards"}
+        </p>
+        <p className="mt-2 text-center text-[13px] font-light text-cocoa">
+          {isTelugu ? "కల్యాణ మంటపము నందు" : "At the Marriage Venue"}
+        </p>
+
+        {/* Divider */}
+        <img
+          src={dividerImg || "/assets/divider.png"}
+          alt=""
+          aria-hidden="true"
+          className="mx-auto my-7 w-[160px] select-none"
+        />
+
+        {/* Live Countdown */}
+        <h2 className="text-center font-display text-[24px] font-bold uppercase leading-[1.25] text-maroon">
+          {isTelugu ? "వివాహ శుభ ఘడియలు" : "The Countdown Begins"}
+        </h2>
+        <div className="mt-8">
+          <Countdown target="2026-08-30T23:29:00+05:30" />
+        </div>
+
+        {/* SECTION 4: Venue */}
+        <h2 className="mt-20 text-center font-display text-[26px] font-bold uppercase tracking-[0.02em] text-maroon">
+          {isTelugu ? "కల్యాణ వేదిక (Venue)" : "The Venue"}
+        </h2>
+        <p className="mt-1 text-center text-[12px] font-light uppercase tracking-[0.18em] text-cocoa">
+          {isTelugu ? "వివాహ ప్రాంగణము" : "Where we celebrate"}
+        </p>
+      </div>
+
+      {/* Venue Photo */}
+      <img
+        src={venueImg || "/assets/venue.jpg"}
+        alt="Sri Padmalaya kalyana mandapam"
+        className="mt-5 w-full select-none object-cover max-w-[500px] mx-auto"
+        loading="lazy"
+      />
+
+      {/* Venue Location & Directions */}
+      <div className="mx-auto w-full max-w-[390px] px-6 pb-14 pt-6">
+        <p className="text-center text-[20px] font-bold uppercase tracking-[0.02em] text-maroon">
+          Sri Padmalaya kalyana mandapam
+        </p>
+        <p className="mt-1 text-center font-telugu text-[18px] font-semibold text-cocoa">
+          (శ్రీ పద్మాలయా కల్యాణ మండపం)
+        </p>
+
+        <div className="mt-6 flex justify-center">
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-maroon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer inline-flex items-center gap-2 text-center"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            {isTelugu ? "గూగుల్ మ్యాప్స్‌లో చూడండి (View on Google Maps)" : "View on Google Maps"}
+          </a>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-maroon px-6 py-14 text-center text-primary-foreground">
+        <div className="mx-auto w-full max-w-[390px]">
+          <p className="text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
+            {isTelugu ? "మీ రాకయే మాకు ఆనందం" : "Your presence is our greatest gift"}
+          </p>
+          <p className="mt-4 text-[19px] font-semibold uppercase leading-[1.3]">
+            {isTelugu ? "మిమ్మల్ని ఆహ్వానించుటలో ఆనందిస్తున్నాము" : "We look forward to celebrating with you"}
+          </p>
+          <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
+            {isTelugu ? "ఆహ్వానించువారు" : "With warm regards"}
+          </p>
+          <div className="mt-4 font-telugu text-[18px] leading-[1.8] font-semibold">
+            <p>పుప్పాల చైనా మోహన రావు & ఝాన్సీ లక్ష్మి</p>
+            <p>సింగులూరి వీరవేణి</p>
+          </div>
+          <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
+            {isTelugu ? "బంధుమిత్రుల సభాసదుల శుభాకాంక్షలతో" : "Best wishes from near & dear"}
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
