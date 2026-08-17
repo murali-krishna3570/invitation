@@ -70,7 +70,7 @@ export default function CoverView({ onOpen, lang }) {
               <br />
               <span className="text-gold text-[26px]">&</span>
               <br />
-              సింగులూరి సోమశేఖర్
+              శింగులూరి సోమశేఖర్
             </h1>
           ) : (
             <h1 className="font-script text-[48px] leading-[1.15] text-maroon">

@@ -53,7 +53,7 @@ export default function LandingView({ lang }) {
               <br />
               <span className="text-gold text-[28px]">&</span>
               <br />
-              సింగులూరి సోమశేఖర్
+              శింగులూరి సోమశేఖర్
             </h1>
           ) : (
             <h1 className="font-script text-[42px] leading-[1.4] text-maroon">
@@ -136,17 +136,17 @@ export default function LandingView({ lang }) {
           <p className="mt-2 text-[26px] font-bold text-maroon">
             Singuluri Somasekhar
             <br />
-            <span className="text-[22px] font-semibold text-maroon">(సింగులూరి సోమశేఖర్)</span>
+            <span className="text-[22px] font-semibold text-maroon">(శింగులూరి సోమశేఖర్)</span>
           </p>
           <div className="mt-4 pt-3 border-t border-gold/20">
             <p className="text-[13px] font-medium leading-[1.8] text-cocoa">
               {isTelugu ? (
                 <>
-                  <span className="font-semibold text-maroon">సింగులూరి వీరవేణి</span> గారు తన కుమారుడు <span className="font-semibold text-maroon">సింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                  <span className="font-semibold text-maroon">శింగులూరి వీరవేణి</span> గారు తన కుమారుడు <span className="font-semibold text-maroon">శింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
                 </>
               ) : (
                 <>
-                  <span className="font-semibold text-maroon">Singuluri Veeraveni</span> cordially invites you to the wedding of her son: <span className="font-semibold text-maroon">Singuluri Somasekhar (సింగులూరి సోమశేఖర్)</span>
+                  <span className="font-semibold text-maroon">Singuluri Veeraveni</span> cordially invites you to the wedding of her son: <span className="font-semibold text-maroon">Singuluri Somasekhar (శింగులూరి సోమశేఖర్)</span>
                 </>
               )}
             </p>
@@ -280,7 +280,7 @@ export default function LandingView({ lang }) {
           </p>
           <div className="mt-4 text-[18px] leading-[1.8] font-semibold">
             <p>కుప్పాల చిన్న మోహన రావు & ఝాన్సీ లక్ష్మి</p>
-            <p>సింగులూరి వీరవేణి</p>
+            <p>శింగులూరి వీరవేణి</p>
           </div>
           <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
             {isTelugu ? "బంధుమిత్రుల శుభాకాంక్షలతో" : "Best wishes from near & dear"}
