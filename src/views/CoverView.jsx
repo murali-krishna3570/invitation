@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import raysImg from '../assets/rays.png';
-import ganeshaImg from '../assets/ganesha.png';
-import coupleImg from '../assets/couple.png';
-import mandalaImg from '../assets/mandala.png';
+import raysImg from '../assets/rays.webp';
+import ganeshaImg from '../assets/ganesha.webp';
+import coupleImg from '../assets/couple.webp';
+import mandalaImg from '../assets/mandala.webp';
 
 export default function CoverView({ onOpen, lang }) {
   const [isLeaving, setIsLeaving] = useState(false);
 
   const handleOpen = () => {
-    // Trigger music playback immediately on explicit user click gesture
     window.dispatchEvent(new CustomEvent('play-invitation-music'));
-
     if (isLeaving) return;
     setIsLeaving(true);
     setTimeout(() => {
@@ -37,14 +35,16 @@ export default function CoverView({ onOpen, lang }) {
         {/* Lord Ganesha & Sun Rays */}
         <div className="relative mt-8 flex flex-col items-center">
           <img
-            src={raysImg || "/assets/rays.png"}
+            src={raysImg || "/assets/rays.webp"}
             alt=""
             aria-hidden="true"
+            fetchpriority="high"
             className="pointer-events-none absolute -top-8 h-[240px] w-[240px] select-none opacity-90"
           />
           <img
-            src={ganeshaImg || "/assets/ganesha.png"}
+            src={ganeshaImg || "/assets/ganesha.webp"}
             alt="Lord Ganesha"
+            fetchpriority="high"
             className="relative h-[130px] w-[130px] object-contain"
           />
           <p className="relative mt-3 font-serif-italic italic text-[19px] tracking-wide text-gold">
@@ -98,14 +98,14 @@ export default function CoverView({ onOpen, lang }) {
         <div className="relative mx-auto mt-10 aspect-square w-full max-w-[346px]">
           <div className="absolute inset-[13%] overflow-hidden rounded-full">
             <img
-              src={coupleImg || "/assets/couple.png"}
+              src={coupleImg || "/assets/couple.webp"}
               alt="The couple in traditional wedding attire"
+              fetchpriority="high"
               className="h-full w-full object-cover"
-              loading="lazy"
             />
           </div>
           <img
-            src={mandalaImg || "/assets/mandala.png"}
+            src={mandalaImg || "/assets/mandala.webp"}
             alt=""
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 h-full w-full select-none mix-blend-darken"

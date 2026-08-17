@@ -4,11 +4,11 @@ import ScratchCard from '../components/ScratchCard';
 import Countdown from '../components/Countdown';
 
 import omImg from '../assets/om.png';
-import elephantsImg from '../assets/elephants.png';
-import coupleStandingImg from '../assets/couple-standing.png';
+import elephantsImg from '../assets/elephants.webp';
+import coupleStandingImg from '../assets/couple-standing.webp';
 import dividerImg from '../assets/divider.png';
-import templeImg from '../assets/temple.png';
-import venueImg from '../assets/venue.jpg';
+import templeImg from '../assets/temple.webp';
+import venueImg from '../assets/venue.webp';
 
 const MAPS_URL = "https://maps.app.goo.gl/c1S77XUwXfrWTjQC8";
 
@@ -72,7 +72,7 @@ export default function LandingView({ lang }) {
 
         {/* Elephants Graphic */}
         <img
-          src={elephantsImg || "/assets/elephants.png"}
+          src={elephantsImg || "/assets/elephants.webp"}
           alt=""
           aria-hidden="true"
           className="mx-auto mt-6 w-[250px] select-none"
@@ -85,10 +85,10 @@ export default function LandingView({ lang }) {
 
         {/* Couple Standing Illustration */}
         <img
-          src={coupleStandingImg || "/assets/couple-standing.png"}
+          src={coupleStandingImg || "/assets/couple-standing.webp"}
           alt="Puppala Sandhya and Singuluri Somasekhar in traditional wedding attire"
           className="mx-auto mt-6 w-[260px] select-none"
-          loading="lazy"
+          loading="eager"
         />
 
         {/* SECTION 1: Bride's Parents & Bride */}
@@ -153,7 +153,7 @@ export default function LandingView({ lang }) {
       {/* SECTION 3: Sumuhurtham & Scratch Card */}
       <section className="relative mt-14 overflow-hidden">
         <img
-          src={templeImg || "/assets/temple.png"}
+          src={templeImg || "/assets/temple.webp"}
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute bottom-0 left-1/2 w-[390px] max-w-none -translate-x-1/2 select-none opacity-[0.08]"
@@ -227,10 +227,10 @@ export default function LandingView({ lang }) {
 
       {/* Venue Photo */}
       <img
-        src={venueImg || "/assets/venue.jpg"}
+        src={venueImg || "/assets/venue.webp"}
         alt="Sri Padmalaya kalyana mandapam"
         className="mt-5 w-full select-none object-cover max-w-[500px] mx-auto"
-        loading="lazy"
+        loading="eager"
       />
 
       {/* Venue Location & Directions */}
