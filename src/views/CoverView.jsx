@@ -26,7 +26,7 @@ export default function CoverView({ onOpen, onOpenRituals, lang }) {
     >
       <div className="mx-auto w-full max-w-[390px]">
         {/* Blessings Header */}
-        <div className="flex items-center justify-between font-serif-italic italic text-[15px] text-gold">
+        <div className="flex items-center justify-between font-serif-italic italic text-[15.5px] font-semibold tracking-wide text-gold">
           <span>Srirastu</span>
           <span>Subhamastu</span>
           <span>Avighnamastu</span>
@@ -47,7 +47,7 @@ export default function CoverView({ onOpen, onOpenRituals, lang }) {
             fetchpriority="high"
             className="relative h-[130px] w-[130px] object-contain"
           />
-          <p className="relative mt-3 font-serif-italic italic text-[19px] tracking-wide text-gold">
+          <p className="relative mt-3 font-serif-italic italic text-[19.5px] font-semibold tracking-wide text-gold">
             Om Sri Ganeshaya Namaha
           </p>
         </div>
@@ -84,11 +84,11 @@ export default function CoverView({ onOpen, onOpenRituals, lang }) {
         </div>
 
         {/* CTA Buttons */}
-        <div className="mt-8 flex flex-col items-center gap-3">
+        <div className="mt-8 flex flex-col items-center gap-3.5">
           <button
             type="button"
             onClick={handleOpen}
-            className="w-full max-w-[280px] rounded-full bg-maroon px-6 py-4 text-[13px] font-medium uppercase tracking-[0.16em] text-primary-foreground shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer font-telugu text-center"
+            className="w-full max-w-[280px] rounded-full bg-maroon px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-white shadow-[0_4px_20px_rgba(212,175,55,0.35)] transition-all hover:scale-[1.03] hover:shadow-[0_6px_24px_rgba(212,175,55,0.45)] active:scale-95 cursor-pointer font-telugu text-center"
           >
             {isTelugu ? "ఆహ్వాన పత్రిక చూడండి" : "Open Invitation"}
           </button>
@@ -99,7 +99,7 @@ export default function CoverView({ onOpen, onOpenRituals, lang }) {
               window.dispatchEvent(new CustomEvent('play-invitation-music'));
               if (onOpenRituals) onOpenRituals();
             }}
-            className="w-full max-w-[280px] rounded-full border border-maroon/50 bg-white/90 px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-maroon shadow-2xs transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer font-telugu flex items-center justify-center gap-2"
+            className="w-full max-w-[280px] rounded-full border-2 border-gold/70 bg-white/95 px-6 py-3.5 text-[12px] font-bold uppercase tracking-[0.12em] text-maroon shadow-2xs transition-all hover:scale-[1.03] hover:bg-white hover:border-gold active:scale-95 cursor-pointer font-telugu flex items-center justify-center gap-2"
           >
             <span>🪔</span>
             <span>{isTelugu ? "పూజా క్రమం & ఆచారాలు" : "Puja Process & Rituals"}</span>

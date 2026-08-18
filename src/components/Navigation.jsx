@@ -6,7 +6,7 @@ export default function Navigation({ activeView, onViewChange, lang }) {
   if (activeView === 'cover') return null;
 
   return (
-    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 rounded-full border border-gold/40 bg-cream/95 p-1.5 shadow-xl backdrop-blur text-[12px] font-telugu max-w-[92vw]">
+    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 rounded-full border border-gold/50 bg-white/90 p-1.5 shadow-[0_4px_20px_rgba(122,28,41,0.12)] backdrop-blur text-[12px] font-telugu max-w-[92vw]">
       <button
         type="button"
         onClick={() => onViewChange('landing')}
