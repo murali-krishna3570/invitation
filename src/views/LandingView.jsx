@@ -8,7 +8,6 @@ import elephantsImg from '../assets/elephants.webp';
 import coupleStandingImg from '../assets/couple-standing.webp';
 import dividerImg from '../assets/divider.png';
 import templeImg from '../assets/temple.webp';
-import venueImg from '../assets/venue.webp';
 
 const MAPS_URL = "https://maps.app.goo.gl/c1S77XUwXfrWTjQC8";
 
@@ -112,12 +111,10 @@ export default function LandingView({ lang, onViewChange }) {
         {/* SECTION 1: Bride's Parents & Bride */}
         <div className="mt-10 rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm font-telugu">
           <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
-            {isTelugu ? "వధువు (Bride)" : "Our Bride"}
+            {isTelugu ? "వధువు" : "Our Bride"}
           </p>
           <p className="mt-2 text-[26px] font-bold text-maroon">
-            Kuppala Sandhya
-            <br />
-            <span className="text-[22px] font-semibold text-maroon">(కుప్పాల సంధ్య)</span>
+            {isTelugu ? "కుప్పాల సంధ్య" : "Kuppala Sandhya"}
           </p>
           <div className="mt-4 pt-3 border-t border-gold/20">
             <p className="text-[13px] font-medium leading-[1.8] text-cocoa">
@@ -127,7 +124,7 @@ export default function LandingView({ lang, onViewChange }) {
                 </>
               ) : (
                 <>
-                  <span className="font-semibold text-maroon">Kuppala Chinna Mohana Rao & Kuppala Jhansi Lakshmi</span> cordially invite you to the wedding of their daughter: <span className="font-semibold text-maroon">Kuppala Sandhya (కుప్పాల సంధ్య)</span>
+                  <span className="font-semibold text-maroon">Kuppala Chinna Mohana Rao & Kuppala Jhansi Lakshmi</span> cordially invite you to the wedding of their daughter: <span className="font-semibold text-maroon">Kuppala Sandhya</span>
                 </>
               )}
             </p>
@@ -145,22 +142,20 @@ export default function LandingView({ lang, onViewChange }) {
         {/* SECTION 2: Groom's Parents & Groom */}
         <div className="rounded-2xl border border-gold/30 bg-cream/80 p-6 text-center shadow-sm font-telugu">
           <p className="text-[11px] font-light uppercase tracking-[0.2em] text-cocoa">
-            {isTelugu ? "వరుడు (Groom)" : "Our Groom"}
+            {isTelugu ? "వరుడు" : "Our Groom"}
           </p>
           <p className="mt-2 text-[26px] font-bold text-maroon">
-            Singuluri Somasekhar
-            <br />
-            <span className="text-[22px] font-semibold text-maroon">(శింగులూరి సోమశేఖర్)</span>
+            {isTelugu ? "శింగులూరి సోమశేఖర్" : "Singuluri Somasekhar"}
           </p>
           <div className="mt-4 pt-3 border-t border-gold/20">
             <p className="text-[13px] font-medium leading-[1.8] text-cocoa">
               {isTelugu ? (
                 <>
-                  <span className="font-semibold text-maroon">శింగులూరి వీరవేణి</span> గారు తన కుమారుడు <span className="font-semibold text-maroon">శింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                  <span className="font-semibold text-maroon">శింగులూరి శ్రీనివాసు & శింగులూరి వేణు</span> గారు తమ కుమారుడు <span className="font-semibold text-maroon">శింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
                 </>
               ) : (
                 <>
-                  <span className="font-semibold text-maroon">Singuluri Veeraveni</span> cordially invites you to the wedding of her son: <span className="font-semibold text-maroon">Singuluri Somasekhar (శింగులూరి సోమశేఖర్)</span>
+                  <span className="font-semibold text-maroon">Singuluri Srinivasu & Singuluri Venu</span> cordially invite you to the wedding of their son: <span className="font-semibold text-maroon">Singuluri Somasekhar</span>
                 </>
               )}
             </p>
@@ -181,7 +176,7 @@ export default function LandingView({ lang, onViewChange }) {
             {isTelugu ? "సుముహూర్తం" : "Save the Date"}
           </p>
 
-          <ScratchCard label={isTelugu ? "తేదీని చూడటానికి రుద్దండి (Scratch)" : "Scratch to reveal the date"}>
+          <ScratchCard label={isTelugu ? "తేదీని చూడటానికి రుద్దండి" : "Scratch to reveal the date"}>
             <div className="mt-6 rounded-[15px] border border-gold/50 bg-cream px-5 py-7 text-center shadow-sm">
               <p className="text-[11px] font-light uppercase tracking-[0.18em] text-cocoa font-telugu">
                 {isTelugu ? "సుముహూర్త సమయం" : "The auspicious day"}
@@ -197,7 +192,9 @@ export default function LandingView({ lang, onViewChange }) {
                 August 2026, 11:29 PM
               </p>
               <div className="mt-4 pt-3 border-t border-gold/30 text-[14px] font-semibold text-maroon font-telugu">
-                ముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు.
+                {isTelugu
+                  ? "ముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు."
+                  : "Muhurtham: Sunday, 30th August 2026 at 11:29 PM."}
               </div>
             </div>
           </ScratchCard>
@@ -207,7 +204,7 @@ export default function LandingView({ lang, onViewChange }) {
       {/* Dinner & Countdown Section */}
       <div className="mx-auto w-full max-w-[390px] px-6">
         <h2 className="text-center font-display text-[24px] font-bold uppercase text-maroon font-telugu">
-          {isTelugu ? "విందు (Dinner)" : "Dinner"}
+          {isTelugu ? "విందు" : "Dinner"}
         </h2>
         <p className="mt-3 text-center text-[20px] font-semibold uppercase leading-[1.3] tracking-[0.01em] text-maroon font-telugu">
           30th August 2026
@@ -236,32 +233,17 @@ export default function LandingView({ lang, onViewChange }) {
 
         {/* SECTION 4: Venue */}
         <h2 className="mt-20 text-center font-display text-[26px] font-bold uppercase tracking-[0.02em] text-maroon font-telugu">
-          {isTelugu ? "కల్యాణ వేదిక (Venue)" : "The Venue"}
+          {isTelugu ? "కల్యాణ వేదిక" : "The Venue"}
         </h2>
         <p className="mt-1 text-center text-[12px] font-light uppercase tracking-[0.18em] text-cocoa font-telugu">
           {isTelugu ? "వివాహ ప్రాంగణము" : "Where we celebrate"}
         </p>
       </div>
 
-      {/* User Provided Venue Photo */}
-      <div className="mt-5 px-6 max-w-[500px] mx-auto">
-        <div className="overflow-hidden rounded-2xl border-2 border-gold/40 shadow-lg">
-          <img
-            src={venueImg || "/assets/venue.webp"}
-            alt="Sri Padmalaya kalyana mandapam"
-            className="w-full select-none object-cover"
-            loading="eager"
-          />
-        </div>
-      </div>
-
       {/* Venue Location & Directions */}
       <div className="mx-auto w-full max-w-[390px] px-6 pb-14 pt-6">
-        <p className="text-center text-[20px] font-bold uppercase tracking-[0.02em] text-maroon">
-          Sri Padmalaya kalyana mandapam
-        </p>
-        <p className="mt-1 text-center font-telugu text-[18px] font-semibold text-cocoa">
-          (శ్రీ పద్మాలయా కల్యాణ మండపం)
+        <p className="text-center text-[20px] font-bold uppercase tracking-[0.02em] text-maroon font-telugu">
+          {isTelugu ? "శ్రీ పద్మాలయా కల్యాణ మండపం" : "Sri Padmalaya kalyana mandapam"}
         </p>
 
         <div className="mt-6 flex justify-center">
@@ -275,7 +257,7 @@ export default function LandingView({ lang, onViewChange }) {
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            {isTelugu ? "గూగుల్ మ్యాప్స్‌లో చూడండి (View on Google Maps)" : "View on Google Maps"}
+            {isTelugu ? "గూగుల్ మ్యాప్స్‌లో చూడండి" : "View on Google Maps"}
           </a>
         </div>
 
@@ -286,7 +268,7 @@ export default function LandingView({ lang, onViewChange }) {
               🪔 {isTelugu ? "వివాహ వేడుక విశిష్టత" : "Wedding Traditions"}
             </p>
             <h3 className="mt-1.5 text-[17px] font-bold text-maroon">
-              {isTelugu ? "వివాహ ఆచారాలు & ప్రాశస్త్యం" : "Wedding Rituals & Significance"}
+              {isTelugu ? "వివాహ పూజా క్రమం & ఆచారాల ప్రాశస్త్యం" : "Wedding Puja Process, Rituals & Significance"}
             </h3>
             <p className="mt-2 text-[12.5px] leading-[1.6] text-cocoa">
               {isTelugu
@@ -303,10 +285,79 @@ export default function LandingView({ lang, onViewChange }) {
             </button>
           </div>
         )}
+
+        {/* SECTION: Points of Contact / సంప్రదించవలసిన నంబర్లు */}
+        <div className="mt-10 rounded-2xl border border-gold/40 bg-cream/90 p-5 shadow-sm font-telugu">
+          <h2 className="text-center font-display text-[20px] font-bold text-maroon uppercase tracking-wide">
+            {isTelugu ? "సంప్రదించవలసిన నంబర్లు" : "Points of Contact"}
+          </h2>
+          <p className="mt-1 text-center text-[12px] font-light text-cocoa">
+            {isTelugu ? "ఏమైనా వివరాల కోసం మరియు సహాయానికి సంప్రదించండి:" : "For any assistance or queries, please feel free to contact:"}
+          </p>
+
+          <div className="mt-5 space-y-3">
+            {/* Contact 1: Durgarao */}
+            <div className="flex items-center justify-between rounded-xl border border-gold/30 bg-cream px-4 py-3 shadow-2xs">
+              <div>
+                <p className="text-[13.5px] font-semibold text-maroon">
+                  {isTelugu ? "దుర్గారావు" : "Durgarao"}
+                  <span className="text-[12px] font-normal text-cocoa block">
+                    ({isTelugu ? "పెళ్లికొడుకు బావ" : "Groom's Brother-in-law"})
+                  </span>
+                </p>
+                <p className="text-[12px] text-cocoa font-sans font-medium mt-0.5">9989673666</p>
+              </div>
+              <a
+                href="tel:9989673666"
+                className="inline-flex items-center gap-1 rounded-full bg-maroon px-3.5 py-1.5 text-[11px] font-medium text-primary-foreground shadow-xs hover:scale-105 active:scale-95 transition-transform"
+              >
+                📞 {isTelugu ? "కాల్ చేయండి" : "Call"}
+              </a>
+            </div>
+
+            {/* Contact 2: Chandu */}
+            <div className="flex items-center justify-between rounded-xl border border-gold/30 bg-cream px-4 py-3 shadow-2xs">
+              <div>
+                <p className="text-[13.5px] font-semibold text-maroon">
+                  {isTelugu ? "చందు" : "Chandu"}
+                  <span className="text-[12px] font-normal text-cocoa block">
+                    ({isTelugu ? "పెళ్లికొడుకు బావమరిది" : "Groom's Brother-in-law"})
+                  </span>
+                </p>
+                <p className="text-[12px] text-cocoa font-sans font-medium mt-0.5">+91 82472 07123</p>
+              </div>
+              <a
+                href="tel:+918247207123"
+                className="inline-flex items-center gap-1 rounded-full bg-maroon px-3.5 py-1.5 text-[11px] font-medium text-primary-foreground shadow-xs hover:scale-105 active:scale-95 transition-transform"
+              >
+                📞 {isTelugu ? "కాల్ చేయండి" : "Call"}
+              </a>
+            </div>
+
+            {/* Contact 3: Murali */}
+            <div className="flex items-center justify-between rounded-xl border border-gold/30 bg-cream px-4 py-3 shadow-2xs">
+              <div>
+                <p className="text-[13.5px] font-semibold text-maroon">
+                  {isTelugu ? "మురళి" : "Murali"}
+                  <span className="text-[12px] font-normal text-cocoa block">
+                    ({isTelugu ? "పెళ్లికూతురు తమ్ముడు" : "Bride's Brother"})
+                  </span>
+                </p>
+                <p className="text-[12px] text-cocoa font-sans font-medium mt-0.5">7386357042</p>
+              </div>
+              <a
+                href="tel:7386357042"
+                className="inline-flex items-center gap-1 rounded-full bg-maroon px-3.5 py-1.5 text-[11px] font-medium text-primary-foreground shadow-xs hover:scale-105 active:scale-95 transition-transform"
+              >
+                📞 {isTelugu ? "కాల్ చేయండి" : "Call"}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-maroon px-6 py-14 text-center text-primary-foreground font-telugu">
+      <footer className="bg-maroon px-6 py-14 text-center text-primary-foreground font-telugu mt-12">
         <div className="mx-auto w-full max-w-[390px]">
           <p className="text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
             {isTelugu ? "మీ రాకయే మాకు ఆనందం" : "Your presence is our greatest gift"}
@@ -318,8 +369,8 @@ export default function LandingView({ lang, onViewChange }) {
             {isTelugu ? "ఆహ్వానించువారు:" : "With warm regards"}
           </p>
           <div className="mt-4 text-[18px] leading-[1.8] font-semibold">
-            <p>కుప్పాల చిన్న మోహన రావు & ఝాన్సీ లక్ష్మి</p>
-            <p>శింగులూరి వీరవేణి</p>
+            <p>{isTelugu ? "కుప్పాల చిన్న మోహన రావు & కుప్పాల ఝాన్సీ లక్ష్మి" : "Kuppala Chinna Mohana Rao & Kuppala Jhansi Lakshmi"}</p>
+            <p>{isTelugu ? "శింగులూరి శ్రీనివాసు & శింగులూరి వేణు" : "Singuluri Srinivasu & Singuluri Venu"}</p>
           </div>
           <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
             {isTelugu ? "బంధుమిత్రుల శుభాకాంక్షలతో" : "Best wishes from near & dear"}

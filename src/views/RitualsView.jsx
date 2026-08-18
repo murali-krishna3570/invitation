@@ -207,7 +207,7 @@ export default function RitualsView({ lang }) {
               {/* What Happens Section */}
               <div className="mt-4">
                 <div className="inline-block rounded-md bg-gold/15 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.1em] text-maroon">
-                  {isTelugu ? "ఆచారం / వివరణ (What Happens)" : "What Happens"}
+                  {isTelugu ? "ఆచారం / వివరణ" : "What Happens"}
                 </div>
                 <p className="mt-2 text-[13.5px] leading-[1.7] text-cocoa">
                   {isTelugu ? ritual.whatTe : ritual.whatEn}
@@ -217,7 +217,7 @@ export default function RitualsView({ lang }) {
               {/* Why We Do It Section */}
               <div className="mt-4 rounded-xl bg-gold/10 p-3.5 border-l-4 border-gold">
                 <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-maroon">
-                  {isTelugu ? "ప్రాశస్త్యం & విశిష్టత (Why We Do It)" : "Why We Do It"}
+                  {isTelugu ? "ప్రాశస్త్యం & విశిష్టత" : "Why We Do It"}
                 </div>
                 <p className="mt-1.5 text-[13px] italic leading-[1.65] text-cocoa font-serif-italic">
                   "{isTelugu ? ritual.whyTe : ritual.whyEn}"
@@ -238,7 +238,7 @@ export default function RitualsView({ lang }) {
         {/* Section 2: Supporting Rituals */}
         <div className="rounded-2xl border border-gold/40 bg-maroon/5 p-5 shadow-sm">
           <h2 className="text-center font-display text-[20px] font-bold text-maroon tracking-wide">
-            {isTelugu ? "అనుబంధ క్రతువులు (Supporting Rituals)" : "Supporting Rituals"}
+            {isTelugu ? "అనుబంధ క్రతువులు" : "Supporting Rituals"}
           </h2>
           <p className="mt-1 text-center text-[12px] text-cocoa">
             {isTelugu
