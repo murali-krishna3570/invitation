@@ -11,7 +11,7 @@ const MENU_CATEGORIES = [
     items: [
       { nameTe: "జిలేబీ", nameEn: "Jalebi", descTe: "వేడి వేడి నోరూరించే స్వీట్ జిలేబీ", descEn: "Hot & Crispy Sweet Jalebi" },
       { nameTe: "మసాలా వడ", nameEn: "Masala Vada", descTe: "కరకరలాడే క్రిస్పీ మసాలా వడ", descEn: "Crispy South Indian Masala Vada" },
-      { nameTe: "కార్న్ సమోసా (విత్ సాస్)", nameEn: "Corn Samosa with Sauce", descTe: "రుచికరమైన కార్న్ సమోసా", descEn: "Delicious Corn Samosa served with Sauce" }
+      { nameTe: "కార్న్ సమోసా", nameEn: "Corn Samosa with Sauce", descTe: "రుచికరమైన కార్న్ సమోసా సాస్‌తో", descEn: "Delicious Corn Samosa served with Sauce" }
     ]
   },
   {
@@ -21,7 +21,7 @@ const MENU_CATEGORIES = [
     items: [
       { nameTe: "పనసకాయ బిర్యానీ", nameEn: "Panasakaya Biryani", descTe: "సుగంధ ద్రవ్యాల గుమగుమల పనసకాయ బిర్యానీ", descEn: "Aromatic & Flavorful Raw Jackfruit Biryani" },
       { nameTe: "పనీర్ కుర్మా", nameEn: "Paneer Kurma", descTe: "రిచ్ అండ్ క్రీమీ పనీర్ కుర్మా గ్రేవీ", descEn: "Rich & Creamy Paneer Kurma" },
-      { nameTe: "పెరుగు చట్నీ", nameEn: "Perugu Chutney (Raita)", descTe: "కమ్మటి పెరుగు చట్నీ", descEn: "Cooling Seasoned Yogurt Raita" }
+      { nameTe: "పెరుగు చట్నీ", nameEn: "Perugu Chutney", descTe: "కమ్మటి పెరుగు చట్నీ", descEn: "Cooling Seasoned Yogurt Raita" }
     ]
   },
   {
@@ -42,9 +42,8 @@ const MENU_CATEGORIES = [
     icon: "🥣",
     items: [
       { nameTe: "సాంబార్", nameEn: "Sambar", descTe: "గుమగుమలాడే పప్పు సాంబార్", descEn: "Aromatic Traditional South Indian Sambar" },
-      { nameTe: "ఉలవచారు (విత్ ఫ్రెష్ క్రీమ్)", nameEn: "Ulavacharu with Cream", descTe: "రాయల్ ఉలవచారు ఫ్రెష్ క్రీమ్‌తో", descEn: "Iconic Ulavacharu topped with Fresh Cream" },
+      { nameTe: "ఉలవచారు", nameEn: "Ulavacharu with Cream", descTe: "రాయల్ ఉలవచారు ఫ్రెష్ క్రీమ్‌తో", descEn: "Iconic Ulavacharu topped with Fresh Cream" },
       { nameTe: "కమ్మని రసం", nameEn: "Rasam", descTe: "వేడి వేడి ఘాటైన రసం", descEn: "Flavorful Traditional Rasam" },
-      { nameTe: "పచ్ఛి నెయ్యి", nameEn: "Pure Ghee", descTe: "స్వచ్ఛమైన నెయ్యి", descEn: "Pure Desi Ghee" },
       { nameTe: "వడియాలు & చిప్స్", nameEn: "Vadiyalu & Chips", descTe: "కరకరలాడే వడియాలు మరియు చిప్స్", descEn: "Crispy Vadiyalu & Potato Chips" },
       { nameTe: "కమ్మని పెరుగు", nameEn: "Fresh Curd", descTe: "చిక్కటి కమ్మని పెరుగు", descEn: "Thick Fresh Curd" }
     ]
