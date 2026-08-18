@@ -5,6 +5,7 @@ export default function AudioPlayer({ src }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const wasPlayingRef = useRef(false);
+  const userHasStartedMusicRef = useRef(false);
   const audioSource = src || invitationMp3;
 
   useEffect(() => {
@@ -13,46 +14,65 @@ export default function AudioPlayer({ src }) {
     audio.volume = 0.6;
 
     const playMusic = () => {
-      if (audio) {
-        audio.play().then(() => setIsPlaying(true)).catch(() => {});
-      }
+      if (!audioRef.current) return;
+      userHasStartedMusicRef.current = true;
+      audioRef.current
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => setIsPlaying(false));
     };
 
-    // Listen for custom trigger when "Open Invitation" is clicked
+    const pauseMusic = (saveState = true) => {
+      if (!audioRef.current) return;
+      if (saveState && !audioRef.current.paused) {
+        wasPlayingRef.current = true;
+      }
+      audioRef.current.pause();
+      setIsPlaying(false);
+    };
+
+    // Listen for custom trigger when "Open Invitation" or CTA is clicked
     const handlePlayEvent = () => {
       playMusic();
     };
 
-    // Also fallback to any user pointer interaction
-    const handleFirstPointer = () => {
-      playMusic();
+    // Handle Tab Switch / Minimize / App Backgrounding / Window Blur
+    const handleHide = () => {
+      pauseMusic(true);
     };
 
-    // Auto-pause music when browser tab/app is minimized or hidden on mobile
-    const handleVisibilityChange = () => {
-      if (!audioRef.current) return;
+    const handleShow = () => {
+      if (wasPlayingRef.current && userHasStartedMusicRef.current && audioRef.current) {
+        audioRef.current
+          .play()
+          .then(() => {
+            setIsPlaying(true);
+            wasPlayingRef.current = false;
+          })
+          .catch(() => {});
+      }
+    };
+
+    const handleVisibility = () => {
       if (document.hidden) {
-        if (!audioRef.current.paused) {
-          wasPlayingRef.current = true;
-          audioRef.current.pause();
-          setIsPlaying(false);
-        }
+        handleHide();
       } else {
-        if (wasPlayingRef.current) {
-          audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
-          wasPlayingRef.current = false;
-        }
+        handleShow();
       }
     };
 
     window.addEventListener('play-invitation-music', handlePlayEvent);
-    window.addEventListener('pointerdown', handleFirstPointer, { once: true });
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener('visibilitychange', handleVisibility);
+    window.addEventListener('pagehide', handleHide);
+    window.addEventListener('blur', handleHide);
+    window.addEventListener('focus', handleShow);
 
     return () => {
       window.removeEventListener('play-invitation-music', handlePlayEvent);
-      window.removeEventListener('pointerdown', handleFirstPointer);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      document.removeEventListener('visibilitychange', handleVisibility);
+      window.removeEventListener('pagehide', handleHide);
+      window.removeEventListener('blur', handleHide);
+      window.removeEventListener('focus', handleShow);
     };
   }, []);
 
@@ -60,8 +80,13 @@ export default function AudioPlayer({ src }) {
     const audio = audioRef.current;
     if (!audio) return;
     if (audio.paused) {
-      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      userHasStartedMusicRef.current = true;
+      audio
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {});
     } else {
+      wasPlayingRef.current = false;
       audio.pause();
       setIsPlaying(false);
     }
