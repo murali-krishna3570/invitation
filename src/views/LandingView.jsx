@@ -196,6 +196,19 @@ export default function LandingView({ lang, onViewChange }) {
                   ? "ముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు."
                   : "Muhurtham: Sunday, 30th August 2026 at 11:29 PM."}
               </div>
+
+              {/* Add to Google Calendar Button */}
+              <div className="mt-5 flex justify-center">
+                <a
+                  href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(isTelugu ? "కుప్పాల సంధ్య & శింగులూరి సోమశేఖర్ వివాహం" : "Kuppala Sandhya & Singuluri Somasekhar Wedding")}&dates=20260830T175900Z/20260830T213000Z&details=${encodeURIComponent(isTelugu ? "సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు. శ్రీ పద్మాలయా కల్యాణ మండపం." : "Sumuhurtham: Sunday, 30th August 2026 at 11:29 PM. Sri Padmalaya Kalyana Mandapam.")}&location=${encodeURIComponent("Sri Padmalaya kalyana mandapam")}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-maroon/30 bg-maroon/10 px-5 py-2 text-[12px] font-semibold text-maroon shadow-2xs hover:bg-maroon/20 transition-transform active:scale-95 cursor-pointer font-telugu"
+                >
+                  <span>📅</span>
+                  <span>{isTelugu ? "Google క్యాలెండర్‌లో జోడించండి" : "Add to Google Calendar"}</span>
+                </a>
+              </div>
             </div>
           </ScratchCard>
         </div>
@@ -259,6 +272,45 @@ export default function LandingView({ lang, onViewChange }) {
             </svg>
             {isTelugu ? "గూగుల్ మ్యాప్స్‌లో చూడండి" : "View on Google Maps"}
           </a>
+        </div>
+
+        {/* SECTION: Travel & Bus Transportation Info */}
+        <div className="mt-8 rounded-2xl border border-gold/40 bg-cream/90 p-5 font-telugu shadow-sm">
+          <h3 className="text-center font-display text-[18px] font-bold text-maroon uppercase tracking-wide flex items-center justify-center gap-2">
+            <span>🚌</span>
+            <span>{isTelugu ? "రవాణా సదుపాయాలు & బస్సు వివరాలు" : "Travel & Bus Transportation Info"}</span>
+          </h3>
+
+          <div className="mt-4 space-y-3 text-[13px] text-cocoa leading-[1.6]">
+            {/* Bride Side Bus */}
+            <div className="rounded-xl border border-gold/30 bg-gold/10 p-3.5">
+              <p className="font-semibold text-maroon text-[14px]">
+                {isTelugu ? "వధువు తరఫు రవాణా" : "Bride's Side Transportation"}
+              </p>
+              <p className="mt-1">
+                {isTelugu
+                  ? "వివాహ ప్రాంగణానికి విచ్చేసేందుకు 2 ప్రత్యేక బస్సులు ఏర్పాటు చేయబడ్డాయి."
+                  : "2 Special buses have been arranged for guests to reach the venue."}
+              </p>
+            </div>
+
+            {/* Groom Side Bus */}
+            <div className="rounded-xl border border-gold/30 bg-gold/10 p-3.5">
+              <p className="font-semibold text-maroon text-[14px]">
+                {isTelugu ? "వరుడి తరఫు రవాణా" : "Groom's Side Transportation"}
+              </p>
+              <p className="mt-1">
+                {isTelugu
+                  ? "వివాహ ప్రాంగణానికి విచ్చేసేందుకు 1-2 ప్రత్యేక బస్సులు ఏర్పాటు చేయబడ్డాయి."
+                  : "1-2 Special buses have been arranged for guests to reach the venue."}
+              </p>
+            </div>
+
+            {/* Landmark & Directions Note */}
+            <div className="pt-2 text-center text-[12px] font-medium text-cocoa">
+              📍 {isTelugu ? "ల్యాండ్‌మార్క్: శ్రీ పద్మాలయా కల్యాణ మండపం" : "Landmark: Sri Padmalaya Kalyana Mandapam"}
+            </div>
+          </div>
         </div>
 
         {/* Wedding Rituals CTA Card */}
@@ -353,6 +405,25 @@ export default function LandingView({ lang, onViewChange }) {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* WhatsApp Share Button */}
+        <div className="mt-8 flex justify-center font-telugu">
+          <a
+            href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+              isTelugu
+                ? "🌸 శ్రీరస్తు శుభమస్తు అవిఘ్నమస్తు 🌸\n\nకుప్పాల సంధ్య & శింగులూరి సోమశేఖర్ ల వివాహ వేడుకకు మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము.\n\n📅 సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు.\n📍 వేదిక: శ్రీ పద్మాలయా కల్యాణ మండపం\n\nవివాహ ఆహ్వాన పత్రిక చూడటానికి కింద ఉన్న లింక్ క్లిక్ చేయండి:\nhttps://murali-krishna3570.github.io/invitation/"
+                : "🌸 Srirastu Subhamastu Avighnamastu 🌸\n\nYou are cordially invited to the wedding of Kuppala Sandhya & Singuluri Somasekhar.\n\n📅 Sumuhurtham: Sunday, 30th August 2026, 11:29 PM\n📍 Venue: Sri Padmalaya Kalyana Mandapam\n\nView Invitation Details:\nhttps://murali-krishna3570.github.io/invitation/"
+            )}`}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full max-w-[340px] rounded-full bg-[#25D366] px-6 py-3.5 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-md transition-transform hover:scale-[1.03] active:scale-95 cursor-pointer flex items-center justify-center gap-2 text-center"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.143 4.174 4.296-1.127z"/>
+            </svg>
+            <span>{isTelugu ? "వాట్సాప్‌లో ఆహ్వానం షేర్ చేయండి" : "Share Invitation on WhatsApp"}</span>
+          </a>
         </div>
       </div>
 
