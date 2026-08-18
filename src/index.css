@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FAF7F2;
+  --color-cream: #F3E8FF;
   --color-maroon: #7A1C29;
   --color-gold: #C49A45;
-  --color-cocoa: #705C53;
+  --color-cocoa: #553E53;
   --color-primary-foreground: #FFFFFF;
 
   --font-script: "Great Vibes", cursive;
