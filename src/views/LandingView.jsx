@@ -191,10 +191,10 @@ export default function LandingView({ lang, onViewChange }) {
               <p className="mt-3 text-[18px] font-semibold text-maroon">
                 August 2026, 11:29 PM
               </p>
-              <div className="mt-4 pt-3 border-t border-gold/30 text-[14px] font-semibold text-maroon font-telugu">
+              <div className="mt-4 pt-3 border-t border-gold/30 text-[13.5px] font-semibold text-maroon font-telugu">
                 {isTelugu
-                  ? "ముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు."
-                  : "Muhurtham: Sunday, 30th August 2026 at 11:29 PM."}
+                  ? "ముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు.\n(శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల)"
+                  : "Muhurtham: Sunday, 30th August 2026 at 11:29 PM.\n(Sri Padmalaya kalyana mandapam, Dwaraka Tirumala)"}
               </div>
 
               {/* Add to Google Calendar Button */}
@@ -224,8 +224,8 @@ export default function LandingView({ lang, onViewChange }) {
           <br />
           {isTelugu ? "ఆదివారం సాయంత్రం 7:30 గంటల నుండి" : "Sunday 7:30 PM Onwards"}
         </p>
-        <p className="mt-2 text-center text-[13px] font-light text-cocoa font-telugu">
-          {isTelugu ? "కల్యాణ మంటపము నందు" : "At the Marriage Venue"}
+        <p className="mt-2 text-center text-[13.5px] font-medium text-cocoa font-telugu">
+          {isTelugu ? "శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల నందు" : "At Sri Padmalaya kalyana mandapam, Dwaraka Tirumala"}
         </p>
 
         {/* Feast Menu CTA Button */}
