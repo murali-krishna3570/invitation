@@ -176,7 +176,7 @@ export default function LandingView({ lang, onViewChange }) {
             {isTelugu ? "సుముహూర్తం" : "Save the Date"}
           </p>
 
-          <ScratchCard label={isTelugu ? "తేదీని చూడటానికి రుద్దండి" : "Scratch to reveal the date"}>
+          <ScratchCard label={isTelugu ? "తేదీని చూడటానికి తాకండి లేదా రుద్దండి" : "Tap or scratch to reveal the date"}>
             <div className="mt-6 rounded-[15px] border border-gold/50 bg-cream px-5 py-7 text-center shadow-sm">
               <p className="text-[11px] font-light uppercase tracking-[0.18em] text-cocoa font-telugu">
                 {isTelugu ? "సుముహూర్త సమయం" : "The auspicious day"}

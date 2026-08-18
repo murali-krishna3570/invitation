@@ -100,7 +100,7 @@ export default function ScratchCard({ children, label = "Scratch to reveal the d
       }
     }
 
-    if (totalSampled > 0 && clearedCount / totalSampled > 0.55) {
+    if (totalSampled > 0 && clearedCount / totalSampled > 0.08) {
       setIsRevealed(true);
     }
   };
@@ -112,7 +112,8 @@ export default function ScratchCard({ children, label = "Scratch to reveal the d
         <>
           <canvas
             ref={canvasRef}
-            className="absolute inset-0 h-full w-full cursor-grab active:cursor-grabbing touch-none rounded-[15px]"
+            className="absolute inset-0 h-full w-full cursor-pointer touch-none rounded-[15px] transition-opacity duration-500"
+            onClick={() => setIsRevealed(true)}
             onPointerDown={(e) => {
               isDragging.current = true;
               e.currentTarget.setPointerCapture(e.pointerId);
@@ -124,19 +125,20 @@ export default function ScratchCard({ children, label = "Scratch to reveal the d
               if (!isDragging.current) return;
               const pos = getPos(e);
               drawScratch(pos.x, pos.y);
+              checkRevealedRatio();
             }}
             onPointerUp={() => {
               isDragging.current = false;
               lastPos.current = null;
-              checkRevealedRatio();
+              setIsRevealed(true);
             }}
             onPointerLeave={() => {
               isDragging.current = false;
               lastPos.current = null;
             }}
           />
-          <div className="pointer-events-none absolute inset-x-0 bottom-3 text-center text-[10px] font-light uppercase tracking-[0.18em] text-maroon/70">
-            {label}
+          <div className="pointer-events-none absolute inset-x-0 bottom-3 text-center text-[10px] font-medium uppercase tracking-[0.16em] text-maroon/80 font-telugu">
+            ✨ {label}
           </div>
         </>
       )}
