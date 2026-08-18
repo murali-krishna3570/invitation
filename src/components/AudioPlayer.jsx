@@ -5,7 +5,7 @@ export default function AudioPlayer({ src }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const wasPlayingRef = useRef(false);
-  const audioSource = src || invitationMp3 || "/assets/invitation.mp3";
+  const audioSource = src || invitationMp3;
 
   useEffect(() => {
     const audio = audioRef.current;
