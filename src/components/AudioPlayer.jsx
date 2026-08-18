@@ -99,7 +99,7 @@ export default function AudioPlayer({ src }) {
         type="button"
         onClick={toggleAudio}
         aria-label={isPlaying ? "Pause music" : "Play music"}
-        className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border-2 border-gold/60 bg-white/95 text-maroon shadow-[0_4px_15px_rgba(122,28,41,0.15)] backdrop-blur transition-all hover:scale-110 active:scale-95 cursor-pointer"
+        className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[#D4AF37] bg-[#FDF6E3] text-[#D4AF37] shadow-[0_2px_8px_rgba(212,175,55,0.25)] backdrop-blur transition-all hover:scale-110 active:scale-95 cursor-pointer"
       >
         {isPlaying ? (
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">

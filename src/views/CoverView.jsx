@@ -99,7 +99,7 @@ export default function CoverView({ onOpen, onOpenRituals, lang }) {
               window.dispatchEvent(new CustomEvent('play-invitation-music'));
               if (onOpenRituals) onOpenRituals();
             }}
-            className="w-full max-w-[280px] rounded-full border-2 border-gold/70 bg-white/95 px-6 py-3.5 text-[12px] font-bold uppercase tracking-[0.12em] text-maroon shadow-2xs transition-all hover:scale-[1.03] hover:bg-white hover:border-gold active:scale-95 cursor-pointer font-telugu flex items-center justify-center gap-2"
+            className="w-full max-w-[280px] rounded-full border-2 border-[#D4AF37] bg-white/95 px-6 py-3.5 text-[12px] font-bold uppercase tracking-[0.12em] text-[#7B2D3B] shadow-2xs transition-all hover:scale-[1.03] hover:bg-white active:scale-95 cursor-pointer font-telugu flex items-center justify-center gap-2"
           >
             <span>🪔</span>
             <span>{isTelugu ? "పూజా క్రమం & ఆచారాలు" : "Puja Process & Rituals"}</span>
