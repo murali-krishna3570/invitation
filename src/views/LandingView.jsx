@@ -151,11 +151,11 @@ export default function LandingView({ lang, onViewChange }) {
             <p className="text-[13px] font-medium leading-[1.8] text-cocoa">
               {isTelugu ? (
                 <>
-                  <span className="font-semibold text-maroon">శింగులూరి శ్రీనివాసు & శింగులూరి వేణు</span> గారు తమ కుమారుడు <span className="font-semibold text-maroon">శింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                  <span className="font-semibold text-maroon">శింగులూరి వేణు & శింగులూరి శ్రీనివాసు</span> గారు తమ కుమారుడు <span className="font-semibold text-maroon">శింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
                 </>
               ) : (
                 <>
-                  <span className="font-semibold text-maroon">Singuluri Srinivasu & Singuluri Venu</span> cordially invite you to the wedding of their son: <span className="font-semibold text-maroon">Singuluri Somasekhar</span>
+                  <span className="font-semibold text-maroon">Singuluri Venu & Singuluri Srinivasu</span> cordially invite you to the wedding of their son: <span className="font-semibold text-maroon">Singuluri Somasekhar</span>
                 </>
               )}
             </p>
@@ -455,7 +455,7 @@ export default function LandingView({ lang, onViewChange }) {
           </p>
           <div className="mt-4 text-[18px] leading-[1.8] font-semibold">
             <p>{isTelugu ? "కుప్పాల చిన్న మోహన రావు & కుప్పాల ఝాన్సీ లక్ష్మి" : "Kuppala Chinna Mohana Rao & Kuppala Jhansi Lakshmi"}</p>
-            <p>{isTelugu ? "శింగులూరి శ్రీనివాసు & శింగులూరి వేణు" : "Singuluri Srinivasu & Singuluri Venu"}</p>
+            <p>{isTelugu ? "శింగులూరి వేణు & శింగులూరి శ్రీనివాసు" : "Singuluri Venu & Singuluri Srinivasu"}</p>
           </div>
           <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
             {isTelugu ? "బంధుమిత్రుల శుభాకాంక్షలతో" : "Best wishes from near & dear"}
