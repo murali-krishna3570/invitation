@@ -4,6 +4,7 @@ import invitationMp3 from '../assets/invitation.mp3';
 export default function AudioPlayer({ src }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const wasPlayingRef = useRef(false);
   const audioSource = src || invitationMp3 || "/assets/invitation.mp3";
 
   useEffect(() => {
@@ -27,12 +28,31 @@ export default function AudioPlayer({ src }) {
       playMusic();
     };
 
+    // Auto-pause music when browser tab/app is minimized or hidden on mobile
+    const handleVisibilityChange = () => {
+      if (!audioRef.current) return;
+      if (document.hidden) {
+        if (!audioRef.current.paused) {
+          wasPlayingRef.current = true;
+          audioRef.current.pause();
+          setIsPlaying(false);
+        }
+      } else {
+        if (wasPlayingRef.current) {
+          audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
+          wasPlayingRef.current = false;
+        }
+      }
+    };
+
     window.addEventListener('play-invitation-music', handlePlayEvent);
     window.addEventListener('pointerdown', handleFirstPointer, { once: true });
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       window.removeEventListener('play-invitation-music', handlePlayEvent);
       window.removeEventListener('pointerdown', handleFirstPointer);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 
@@ -54,7 +74,7 @@ export default function AudioPlayer({ src }) {
         type="button"
         onClick={toggleAudio}
         aria-label={isPlaying ? "Pause music" : "Play music"}
-        className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-gold/40 bg-cream/90 text-maroon shadow-lg backdrop-blur transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+        className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-gold/40 bg-white/90 text-maroon shadow-lg backdrop-blur transition-transform hover:scale-105 active:scale-95 cursor-pointer"
       >
         {isPlaying ? (
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">

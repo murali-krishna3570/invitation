@@ -122,19 +122,14 @@ export default function MenuView({ lang }) {
                 {cat.items.map((item, itemIdx) => (
                   <div
                     key={itemIdx}
-                    className="flex items-center justify-between rounded-xl border border-gold/20 bg-cream px-3.5 py-2.5 shadow-2xs"
+                    className="rounded-xl border border-gold/20 bg-cream px-3.5 py-2.5 shadow-2xs"
                   >
-                    <div>
-                      <p className="text-[14px] font-bold text-maroon">
-                        {isTelugu ? item.nameTe : item.nameEn}
-                      </p>
-                      <p className="text-[11.5px] text-cocoa mt-0.5">
-                        {isTelugu ? item.descTe : item.descEn}
-                      </p>
-                    </div>
-                    <span className="text-[11px] font-semibold text-gold bg-maroon/10 px-2.5 py-1 rounded-full border border-gold/25">
-                      ✓
-                    </span>
+                    <p className="text-[14px] font-bold text-maroon">
+                      {isTelugu ? item.nameTe : item.nameEn}
+                    </p>
+                    <p className="text-[11.5px] text-cocoa mt-0.5">
+                      {isTelugu ? item.descTe : item.descEn}
+                    </p>
                   </div>
                 ))}
               </div>

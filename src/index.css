@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Tailwind CSS v4 Theme Configuration */
 @theme {
   --color-cream: #F3E8FF;
   --color-maroon: #7A1C29;
