@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import invitationMp3 from '../assets/song_test.mp3';
+import invitationMp3 from '../assets/audio_test_2.mp3';
 
 export default function AudioPlayer({ src }) {
   const audioRef = useRef(null);

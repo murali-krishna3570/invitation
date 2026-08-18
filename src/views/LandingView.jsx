@@ -200,7 +200,7 @@ export default function LandingView({ lang, onViewChange }) {
               {/* Add to Google Calendar Button */}
               <div className="mt-5 flex justify-center">
                 <a
-                  href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(isTelugu ? "కుప్పాల సంధ్య & శింగులూరి సోమశేఖర్ వివాహం" : "Kuppala Sandhya & Singuluri Somasekhar Wedding")}&dates=20260830T175900Z/20260830T213000Z&details=${encodeURIComponent(isTelugu ? "సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు. శ్రీ పద్మాలయా కల్యాణ మండపం." : "Sumuhurtham: Sunday, 30th August 2026 at 11:29 PM. Sri Padmalaya Kalyana Mandapam.")}&location=${encodeURIComponent("Sri Padmalaya kalyana mandapam")}`}
+                  href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(isTelugu ? "కుప్పాల సంధ్య & శింగులూరి సోమశేఖర్ వివాహం" : "Kuppala Sandhya & Singuluri Somasekhar Wedding")}&dates=20260830T175900Z/20260830T213000Z&details=${encodeURIComponent(isTelugu ? "సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు. శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల." : "Sumuhurtham: Sunday, 30th August 2026 at 11:29 PM. Sri Padmalaya Kalyana Mandapam, Dwaraka Tirumala.")}&location=${encodeURIComponent("Sri Padmalaya kalyana mandapam, Dwaraka Tirumala")}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-maroon/30 bg-maroon/10 px-5 py-2 text-[12px] font-semibold text-maroon shadow-2xs hover:bg-maroon/20 transition-transform active:scale-95 cursor-pointer font-telugu"
@@ -270,7 +270,7 @@ export default function LandingView({ lang, onViewChange }) {
       {/* Venue Location & Directions */}
       <div className="mx-auto w-full max-w-[390px] px-6 pb-14 pt-6">
         <p className="text-center text-[20px] font-bold uppercase tracking-[0.02em] text-maroon font-telugu">
-          {isTelugu ? "శ్రీ పద్మాలయా కల్యాణ మండపం" : "Sri Padmalaya kalyana mandapam"}
+          {isTelugu ? "శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల" : "Sri Padmalaya kalyana mandapam, Dwaraka Tirumala"}
         </p>
 
         <div className="mt-6 flex justify-center">
@@ -322,7 +322,7 @@ export default function LandingView({ lang, onViewChange }) {
 
             {/* Landmark & Directions Note */}
             <div className="pt-2 text-center text-[12px] font-medium text-cocoa">
-              📍 {isTelugu ? "ల్యాండ్‌మార్క్: శ్రీ పద్మాలయా కల్యాణ మండపం" : "Landmark: Sri Padmalaya Kalyana Mandapam"}
+              📍 {isTelugu ? "ల్యాండ్‌మార్క్: శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల" : "Landmark: Sri Padmalaya Kalyana Mandapam, Dwaraka Tirumala"}
             </div>
           </div>
         </div>
@@ -426,8 +426,8 @@ export default function LandingView({ lang, onViewChange }) {
           <a
             href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
               isTelugu
-                ? "🌸 శ్రీరస్తు శుభమస్తు అవిఘ్నమస్తు 🌸\n\nకుప్పాల సంధ్య & శింగులూరి సోమశేఖర్ ల వివాహ వేడుకకు మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము.\n\n📅 సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు.\n📍 వేదిక: శ్రీ పద్మాలయా కల్యాణ మండపం\n\nవివాహ ఆహ్వాన పత్రిక చూడటానికి కింద ఉన్న లింక్ క్లిక్ చేయండి:\nhttps://murali-krishna3570.github.io/invitation/"
-                : "🌸 Srirastu Subhamastu Avighnamastu 🌸\n\nYou are cordially invited to the wedding of Kuppala Sandhya & Singuluri Somasekhar.\n\n📅 Sumuhurtham: Sunday, 30th August 2026, 11:29 PM\n📍 Venue: Sri Padmalaya Kalyana Mandapam\n\nView Invitation Details:\nhttps://murali-krishna3570.github.io/invitation/"
+                ? "🌸 శ్రీరస్తు శుభమస్తు అవిఘ్నమస్తు 🌸\n\nకుప్పాల సంధ్య & శింగులూరి సోమశేఖర్ ల వివాహ వేడుకకు మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము.\n\n📅 సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు.\n📍 వేదిక: శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల\n\nవివాహ ఆహ్వాన పత్రిక చూడటానికి కింద ఉన్న లింక్ క్లిక్ చేయండి:\nhttps://murali-krishna3570.github.io/invitation/"
+                : "🌸 Srirastu Subhamastu Avighnamastu 🌸\n\nYou are cordially invited to the wedding of Kuppala Sandhya & Singuluri Somasekhar.\n\n📅 Sumuhurtham: Sunday, 30th August 2026, 11:29 PM\n📍 Venue: Sri Padmalaya Kalyana Mandapam, Dwaraka Tirumala\n\nView Invitation Details:\nhttps://murali-krishna3570.github.io/invitation/"
             )}`}
             target="_blank"
             rel="noreferrer"
