@@ -10,6 +10,7 @@ const MENU_CATEGORIES = [
     icon: "🥟",
     items: [
       { nameTe: "జిలేబీ", nameEn: "Jalebi", descTe: "వేడి వేడి నోరూరించే స్వీట్ జిలేబీ", descEn: "Hot & Crispy Sweet Jalebi" },
+      { nameTe: "ఆగ్రా పాన్", nameEn: "Agra Paan", descTe: "ఆగ్రా స్పెషల్ స్వీట్ పాన్", descEn: "Special Agra Sweet Paan" },
       { nameTe: "మసాలా వడ", nameEn: "Masala Vada", descTe: "కరకరలాడే క్రిస్పీ మసాలా వడ", descEn: "Crispy South Indian Masala Vada" },
       { nameTe: "కార్న్ సమోసా", nameEn: "Corn Samosa with Sauce", descTe: "రుచికరమైన కార్న్ సమోసా సాస్‌తో", descEn: "Delicious Corn Samosa served with Sauce" }
     ]
@@ -49,12 +50,11 @@ const MENU_CATEGORIES = [
     ]
   },
   {
-    categoryTe: "డెసర్ట్స్, పాన్ & తాంబూలం",
-    categoryEn: "Desserts, Paan & Refreshments",
+    categoryTe: "డెసర్ట్స్ & తాంబూలం",
+    categoryEn: "Desserts & Refreshments",
     icon: "🍨",
     items: [
       { nameTe: "ఐస్ క్రీమ్", nameEn: "Ice Cream", descTe: "చల్లని చల్లని ఐస్ క్రీమ్", descEn: "Delightful Chilled Ice Cream" },
-      { nameTe: "ఆగ్రా పాన్", nameEn: "Agra Paan", descTe: "ఆగ్రా స్పెషల్ స్వీట్ పాన్", descEn: "Special Agra Sweet Paan" },
       { nameTe: "కిల్లీ / తాంబూలం", nameEn: "Killi / Tambulam", descTe: "సుగంధ కిళ్లీ & సంప్రదాయ తాంబూలం", descEn: "Traditional Killi & Tambulam" }
     ]
   }
