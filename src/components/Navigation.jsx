@@ -23,27 +23,14 @@ export default function Navigation({ activeView, onViewChange, lang }) {
       <button
         type="button"
         onClick={() => onViewChange('rituals')}
-        className={`px-3 py-2 rounded-full font-semibold transition-all cursor-pointer flex items-center gap-1 text-[11.5px] ${
+        className={`px-4 py-2 rounded-full font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
           activeView === 'rituals'
             ? 'bg-maroon text-primary-foreground shadow-md scale-105'
             : 'text-cocoa hover:text-maroon'
         }`}
       >
         <span>🪔</span>
-        <span>{isTelugu ? 'పూజా క్రమం' : 'Rituals'}</span>
-      </button>
-
-      <button
-        type="button"
-        onClick={() => onViewChange('menu')}
-        className={`px-3 py-2 rounded-full font-semibold transition-all cursor-pointer flex items-center gap-1 text-[11.5px] ${
-          activeView === 'menu'
-            ? 'bg-maroon text-primary-foreground shadow-md scale-105'
-            : 'text-cocoa hover:text-maroon'
-        }`}
-      >
-        <span>🍽️</span>
-        <span>{isTelugu ? 'విందు వంటకాలు' : 'Menu'}</span>
+        <span>{isTelugu ? 'పూజా క్రమం & ఆచారాలు' : 'Puja Process'}</span>
       </button>
     </nav>
   );

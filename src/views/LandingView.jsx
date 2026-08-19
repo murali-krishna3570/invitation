@@ -228,19 +228,7 @@ export default function LandingView({ lang, onViewChange }) {
           {isTelugu ? "శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల నందు" : "At Sri Padmalaya kalyana mandapam, Dwaraka Tirumala"}
         </p>
 
-        {/* Feast Menu CTA Button */}
-        {onViewChange && (
-          <div className="mt-4 flex justify-center font-telugu">
-            <button
-              type="button"
-              onClick={() => onViewChange('menu')}
-              className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-5 py-2 text-[12px] font-semibold text-maroon shadow-2xs hover:bg-gold/25 transition-transform active:scale-95 cursor-pointer"
-            >
-              <span>🍽️</span>
-              <span>{isTelugu ? "కళ్యాణ విందు వంటకాలు చూడండి ➔" : "View Wedding Feast Menu ➔"}</span>
-            </button>
-          </div>
-        )}
+
 
         {/* Divider */}
         <img
