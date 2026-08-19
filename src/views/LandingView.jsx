@@ -186,10 +186,10 @@ export default function LandingView({ lang, onViewChange }) {
               </p>
               <p className="mt-3 font-display font-bold leading-none text-maroon">
                 <span className="text-[46px]">30</span>
-                <span className="align-super text-[18px]">th</span>
+                <span className="align-super text-[18px] font-telugu">{isTelugu ? "వ" : "th"}</span>
               </p>
-              <p className="mt-3 text-[18px] font-semibold text-maroon">
-                August 2026, 11:29 PM
+              <p className="mt-3 text-[18px] font-semibold text-maroon font-telugu">
+                {isTelugu ? "ఆగస్టు 2026, రాత్రి 11:29 గంటలకు" : "August 2026, 11:29 PM"}
               </p>
               <div className="mt-4 pt-3 border-t border-gold/30 text-[13.5px] font-semibold text-maroon font-telugu">
                 {isTelugu
@@ -200,7 +200,7 @@ export default function LandingView({ lang, onViewChange }) {
               {/* Add to Google Calendar Button */}
               <div className="mt-5 flex justify-center">
                 <a
-                  href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(isTelugu ? "కుప్పాల సంధ్య & శింగులూరి సోమశేఖర్ వివాహం" : "Kuppala Sandhya & Singuluri Somasekhar Wedding")}&dates=20260830T175900Z/20260830T213000Z&details=${encodeURIComponent(isTelugu ? "సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు. శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల." : "Sumuhurtham: Sunday, 30th August 2026 at 11:29 PM. Sri Padmalaya Kalyana Mandapam, Dwaraka Tirumala.")}&location=${encodeURIComponent("Sri Padmalaya kalyana mandapam, Dwaraka Tirumala")}`}
+                  href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(isTelugu ? "కుప్పాల సంధ్య & సోమశేఖర్ శింగులూరి వివాహం" : "Kuppala Sandhya & Somasekhar Singuluri Wedding")}&dates=20260830T175900Z/20260830T213000Z&details=${encodeURIComponent(isTelugu ? "సుముహూర్తం: ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 11:29 గంటలకు. శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల." : "Sumuhurtham: Sunday, 30th August 2026 at 11:29 PM. Sri Padmalaya Kalyana Mandapam, Dwaraka Tirumala.")}&location=${encodeURIComponent("Sri Padmalaya kalyana mandapam, Dwaraka Tirumala")}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-maroon/30 bg-maroon/10 px-5 py-2 text-[12px] font-semibold text-maroon shadow-2xs hover:bg-maroon/20 transition-transform active:scale-95 cursor-pointer font-telugu"
@@ -219,12 +219,11 @@ export default function LandingView({ lang, onViewChange }) {
         <h2 className="text-center font-display text-[24px] font-bold uppercase text-maroon font-telugu">
           {isTelugu ? "విందు" : "Dinner"}
         </h2>
-        <p className="mt-3 text-center text-[20px] font-semibold uppercase leading-[1.3] tracking-[0.01em] text-maroon font-telugu">
-          30th August 2026
+        <p className="mt-3 text-center text-[15px] font-medium leading-[1.7] text-cocoa font-telugu">
+          {isTelugu
+            ? "ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 7:00 గంటల నుండి"
+            : "Sunday, 30th August 2026, from 7:00 PM onwards"}
           <br />
-          {isTelugu ? "ఆదివారం సాయంత్రం 7:30 గంటల నుండి" : "Sunday 7:30 PM Onwards"}
-        </p>
-        <p className="mt-2 text-center text-[13.5px] font-medium text-cocoa font-telugu">
           {isTelugu ? "శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల నందు" : "At Sri Padmalaya kalyana mandapam, Dwaraka Tirumala"}
         </p>
 
@@ -303,8 +302,8 @@ export default function LandingView({ lang, onViewChange }) {
               </p>
               <p className="mt-1">
                 {isTelugu
-                  ? "వివాహ ప్రాంగణానికి విచ్చేసేందుకు 1-2 ప్రత్యేక బస్సులు ఏర్పాటు చేయబడ్డాయి."
-                  : "1-2 Special buses have been arranged for guests to reach the venue."}
+                  ? "వివాహ ప్రాంగణానికి విచ్చేసేందుకు 2 ప్రత్యేక బస్సులు ఏర్పాటు చేయబడ్డాయి."
+                  : "2 Special buses have been arranged for guests to reach the venue."}
               </p>
             </div>
 
