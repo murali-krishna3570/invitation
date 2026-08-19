@@ -70,7 +70,7 @@ export default function CoverView({ onOpen, onOpenRituals, lang }) {
               <br />
               <span className="text-gold text-[26px]">&</span>
               <br />
-              శింగులూరి సోమశేఖర్
+              సోమశేఖర్ శింగులూరి
             </h1>
           ) : (
             <h1 className="font-script text-[48px] leading-[1.15] text-maroon">
@@ -78,7 +78,7 @@ export default function CoverView({ onOpen, onOpenRituals, lang }) {
               <br />
               <span className="text-gold text-[36px]">&</span>
               <br />
-              Singuluri Somasekhar
+              Somasekhar Singuluri
             </h1>
           )}
         </div>

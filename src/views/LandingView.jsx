@@ -145,17 +145,17 @@ export default function LandingView({ lang, onViewChange }) {
             {isTelugu ? "వరుడు" : "Our Groom"}
           </p>
           <p className="mt-2 text-[26px] font-bold text-maroon">
-            {isTelugu ? "శింగులూరి సోమశేఖర్" : "Singuluri Somasekhar"}
+            {isTelugu ? "సోమశేఖర్ శింగులూరి" : "Somasekhar Singuluri"}
           </p>
           <div className="mt-4 pt-3 border-t border-gold/20">
             <p className="text-[13px] font-medium leading-[1.8] text-cocoa">
               {isTelugu ? (
                 <>
-                  <span className="font-semibold text-maroon">శింగులూరి వేణు & శింగులూరి శ్రీనివాసు</span> గారు తమ కుమారుడు <span className="font-semibold text-maroon">శింగులూరి సోమశేఖర్</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
+                  <span className="font-semibold text-maroon">వేణు శింగులూరి & శ్రీనివాసు శింగులూరి</span> గారు తమ కుమారుడు <span className="font-semibold text-maroon">సోమశేఖర్ శింగులూరి</span> వివాహానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నారు.
                 </>
               ) : (
                 <>
-                  <span className="font-semibold text-maroon">Singuluri Venu & Singuluri Srinivasu</span> cordially invite you to the wedding of their son: <span className="font-semibold text-maroon">Singuluri Somasekhar</span>
+                  <span className="font-semibold text-maroon">Venu Singuluri & Srinivasu Singuluri</span> cordially invite you to the wedding of their son: <span className="font-semibold text-maroon">Somasekhar Singuluri</span>
                 </>
               )}
             </p>
@@ -443,7 +443,7 @@ export default function LandingView({ lang, onViewChange }) {
           </p>
           <div className="mt-4 text-[18px] leading-[1.8] font-semibold">
             <p>{isTelugu ? "కుప్పాల చిన్న మోహన రావు & కుప్పాల ఝాన్సీ లక్ష్మి" : "Kuppala Chinna Mohana Rao & Kuppala Jhansi Lakshmi"}</p>
-            <p>{isTelugu ? "శింగులూరి వేణు & శింగులూరి శ్రీనివాసు" : "Singuluri Venu & Singuluri Srinivasu"}</p>
+            <p>{isTelugu ? "వేణు శింగులూరి & శ్రీనివాసు శింగులూరి" : "Venu Singuluri & Srinivasu Singuluri"}</p>
           </div>
           <p className="mt-8 text-[11px] font-light uppercase tracking-[0.18em] opacity-80">
             {isTelugu ? "బంధుమిత్రుల శుభాకాంక్షలతో" : "Best wishes from near & dear"}
