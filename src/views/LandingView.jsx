@@ -221,8 +221,8 @@ export default function LandingView({ lang, onViewChange }) {
         </h2>
         <p className="mt-3 text-center text-[15px] font-medium leading-[1.7] text-cocoa font-telugu">
           {isTelugu
-            ? "ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 7:00 గంటల నుండి"
-            : "Sunday, 30th August 2026, from 7:00 PM onwards"}
+            ? "ఆదివారం, 30 ఆగస్టు 2026, రాత్రి 8:00 గంటల నుండి"
+            : "Sunday, 30th August 2026, from 8:00 PM onwards"}
           <br />
           {isTelugu ? "శ్రీ పద్మాలయా కల్యాణ మండపం, ద్వారకా తిరుమల నందు" : "At Sri Padmalaya kalyana mandapam, Dwaraka Tirumala"}
         </p>
